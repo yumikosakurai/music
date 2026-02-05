@@ -2,51 +2,92 @@
 <html lang="ja">
 
 <head prefix="og: https://ogp.me/ns#">
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="format-detection" content="telephone=no, email=no" />
-	<title>きたむらミュージックスクール</title>
-	<meta name="description" content="ミュージックスクール ホームページ" />
-	<meta name="keywords" content="ホームページ制作 webデザイン" />
-	<meta name="robots" content="noindex" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <title>きたむらミュージックスクール</title>
+  <meta name="description" content="ミュージックスクール ホームページ" />
+  <meta name="keywords" content="ホームページ制作 webデザイン" />
+  <meta name="robots" content="noindex" />
 
-	<!-- OGP設定 -->
-	<meta property="og:title" content="ミュージックスクール" />
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://サムネイル" >
-	<meta property="og:url" content="ページのURL" />
-   <link rel="canonical" href="ページのURL">
-	<meta property="og:description" content="どんなスクールかご紹介します" />
-	<meta property="og:site_name" content="きたむらミュージックスクール" />
-	<meta property="og:locale" content="ja_JP" />
+  <!-- OGP設定 -->
+  <meta property="og:title" content="ミュージックスクール" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://サムネイル">
+  <meta property="og:url" content="ページのURL" />
+  <link rel="canonical" href="ページのURL">
+  <meta property="og:description" content="どんなスクールかご紹介します" />
+  <meta property="og:site_name" content="きたむらミュージックスクール" />
+  <meta property="og:locale" content="ja_JP" />
 
-  	<!-- google font設定 -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-
+  <!-- google font設定 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
-  <body>
-    
-    <header>
-      <div class="header">
-        <div class="inner">
-          <div class="header__title">
-          <h1>
-					<a href="#">
-						<span class="icon">
-							<img src="./images/logo-red.png" alt="音符のアイコン">
-						</span>
-						きたむら<br>
-            ミュージックスクール
-					</a>
-				</h1>
-       </div>
-       <div class="header__right">
-        <ul class="header__nav">
+
+<body>
+
+  <header class="l-header">
+    <div class="l-header-inner inner">
+      <div class="l-header__title">
+        <h1>
+          <a href="#">
+            <span class="l-header__logo">
+              <img src="./images/logo-red.png" alt="音符のアイコン">
+            </span>
+            <span class="l-header__name">
+              <span class="l-header__name-main">きたむら<br class="pc-only"></span>
+              <span class="l-header__name-sub">ミュージックスクール</span>
+            </span>
+          </a>
+        </h1>
+      </div>
+      <div class="l-header__right">
+            <!-- ハンバーガーボタン -->
+            <div class="hamburger sp-only" aria-label="メニュー">
+              <!-- <div class="header__hb-btn" aria-label="メニュー"> -->
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <ul class="l-header__nav l-header-nav pc-only">
+                <li>
+                  <a href="">料金</a>
+                </li>
+                <li>
+                  <a href="">ブログ</a>
+                </li>
+                <li>
+                  <a href="">卒業実績</a>
+                </li>
+              </ul>
+              <a href="" class="l-header__contact pc-only">お問い合わせ</a>
+          </div>
+      </div>
+
+  </header>
+
+  <main>
+    <div class="main">
+      <div class="p-top-mv"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="l-footer">
+      <div class="inner">
+        <ul class="l-footer__nav">
+          <li>
+            <a href="">ホーム</a>
+          </li>
           <li>
             <a href="">料金</a>
           </li>
@@ -57,31 +98,29 @@
             <a href="">卒業実績</a>
           </li>
         </ul>
-          <a href="" class="header__contact">お問い合わせ</a>
-
-      
+        <div class="l-footer__logo">
+          <img src="./images/logo-white.png" alt="白の音符のアイコン">
         </div>
-       </div>
+        <div class="l-footer__copyright">
+          Copyright &copy; 0000 KITAMURA music school Inc. All Rights
+        </div>
+        <div class="l-footer-sns sns">
+          <a href="" class="l-sns__link" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon-twitter.svg" alt="x" /></a>
+          <a href="" class="l-sns__link" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon-facebook.svg" alt="facebook" /></a>
+          <a href="" class="l-sns__link" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon-youtube.svg" alt="youtube" /></a>
+          <a href="" class="l-sns__link" target="_blank" rel="noopener noreferrer">
+            <img src="images/icon-instagram.svg" alt="instagram" /></a>
 
+        </div>
       </div>
+    </div>
 
-    </header>
-
-    <main>
-      <div class="main"></div>
-
-    </main>
-
-    <footer>
-      <div class="footer"></div>
-
-    </footer>
+  </footer>
 
 
-  </body>
+</body>
 
-  </html>
-
-  
-
-
+</html>
