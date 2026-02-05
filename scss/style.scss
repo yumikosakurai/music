@@ -1,118 +1,21 @@
-// vw関数
-@function vw($pixelSize, $baseWidth: 1080) {
-  @return calc($pixelSize / $baseWidth * 100vw);
-}
-
-@mixin sp {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin sp-middle {
-  @media (max-width: 350px) {
-    @content;
-  }
-}
+// reset
+@forward './foundation/reset';
+// base
+@forward './foundation/base';
+// layout
+@forward './layout';
+// @forward './layout/header';
+// @forward './layout/footer';
 
 
-@mixin sp-smaller {
-  @media (max-width: 340px) {
-    @content;
-  }
-}
 
 
-@mixin tablet {
-  @media (min-width: 767px) and (max-width: 858px) {
-    @content;
-  }
-}
-
-@mixin pc {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-
-.pc-only {
-  display: inline;
-}
-
-@include sp {
-  .pc-only {
-    display: none;
-  }
-}
-
-@include pc {
-  .sp-only {
-    display: none;
-  }
-}
-
-body {
-  font: {
-    family: "Yu Mincho", "YuMincho", "游明朝", "Noto Serif JP", "Hiragino Mincho ProN", "IPAexMincho", serif;
-    optical-sizing: auto;
-    weight: 500;
-    style: normal;
-    size: 1.6rem;
-  }
-
-  letter-spacing: 0;
-  color: #000000;
-  line-height: calc(25 / 16);
-}
-
-html {
-  appearance: none;
-  -webkit-appearance: none;
-  -webkit-text-size-adjust: 100%;
-  word-break: break-all;
-  font-size: 10px;
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-
-  @include sp {
-    scroll-padding-top: 50px;
-  }
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
 
 
-a {
-  display: inline-block;
-  text-decoration: none;
-  transition: opacity 0.4s;
-}
 
-a:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
 
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
 
-.inner {
-  width: 100%;
-  max-width: 980px;
-  padding-inline: vw(30, 1080);
-  margin-inline: auto;
 
-  @include sp {
-    max-width: 767px;
-    padding-inline: 30px !important;
-    margin-inline: auto;
-    margin: 0 auto;
-  }
-}
+
+
 
