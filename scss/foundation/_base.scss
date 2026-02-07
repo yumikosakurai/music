@@ -3,26 +3,25 @@
 
 @include sp {
   .pc-only {
-    display: none;
+    display: none!important;
   }
 }
 
 @include pc {
   .sp-only {
-    display: none;
+    display: none!important;
   }
 }
 
 body {
   font: {
-    family: "Yu Mincho", "YuMincho", "游明朝", "Noto Serif JP", "Hiragino Mincho ProN", "IPAexMincho", serif;
+    family: "YuGothic", "Noto Sans JP","Source Han Sans", "M+ FONTS";
     optical-sizing: auto;
     weight: 500;
     style: normal;
     size: 1.8rem;
-
   }
-
+  
   letter-spacing: 0;
   color: #000000;
   line-height: calc(30 / 18);
@@ -30,7 +29,6 @@ body {
   @include sp {
     font-size: 1.6rem;
     line-height: calc(30 / 16);
-
   }
 }
 
@@ -39,12 +37,16 @@ html {
   -webkit-appearance: none;
   -webkit-text-size-adjust: 100%;
   word-break: break-all;
-  font-size: 10px;
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  font-size: 10px;
+  @media (max-width: 940px) and (min-width: 768px) {
+    font-size: vw(10,940);
+  }
 
   @include sp {
     scroll-padding-top: 50px;
+    font-size: vw(10,375);
   }
 }
 
@@ -72,20 +74,21 @@ img {
 }
 
 .inner {
-  width: 100%;
-  max-width: 980px;
-  padding-inline: vw(30, 1080);
-  margin-inline: auto;
+  // width: 100%;
+  // max-width: 940px;
+  // padding-inline: vw(30, 1080);
+  // width: min(vw(880,940),880px);
+  width: 88rem;
+  margin: 0 auto;
 
   @include sp {
     max-width: 767px;
-    padding-inline: 30px !important;
+    // padding-inline: 20px !important;
     margin-inline: auto;
     margin: 0 auto;
   }
+ 
 }
 
 
-.test{
-  background: $color-red;
-}
+
