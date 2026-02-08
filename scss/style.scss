@@ -6,6 +6,11 @@
 @forward './layout';
 // @forward './layout/header';
 // @forward './layout/footer';
+// @forward '../component/project';
+
+@forward 'object/component';
+@forward 'object/project';
+
 
 
 
