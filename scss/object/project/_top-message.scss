@@ -1,0 +1,74 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.p-top__massege {
+  padding-top: 6.6rem;
+  padding-bottom: 5.5rem;
+}
+
+.p-massege__plan {
+  display: flex;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: calc(50 / 35);
+  color: #CB0000;
+  justify-content: center;
+  align-items: center;
+
+  @include sp {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+  }
+}
+
+.p-massege__sub {
+  display: flex;
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.7rem;
+}
+
+.p-massege__semicircle {
+
+  display: flex;
+  margin: 3.4rem auto 0;
+  width: 85.815rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-massege__flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 2.4rem;
+  align-items: stretch;
+}
+
+.p-massege__side {
+  display: grid;
+  row-gap: 3rem; // ← 単語と単語の縦間隔
+}
+.p-massege-side__left {
+  text-align: right;
+  padding-right: 3rem;
+}
+
+.p-massege-side__right {
+  text-align: left;
+  padding-left: 3rem;
+}
+
+.p-massege-flow__arrow {
+  display: flex;
+  justify-content: center;
+}
+
+.p-massege-flow__arrow img {
+  height: 100%;
+  max-height: 100%;
+  width: auto;
+  display: block;
+}
+

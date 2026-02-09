@@ -1,0 +1,25 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 300"
+  width="20"
+  height="300"
+>
+
+  <!-- 上向き矢印 -->
+  <polygon points="10,0 0,12 20,12" fill="#CB0000" />
+
+<!-- 縦線 -->
+<line
+  x1="10"
+  y1="12"
+  x2="10"
+  y2="200"
+  stroke="#CB0000"
+  stroke-width="2"
+/>
+
+<!-- 丸（3つ） -->
+<circle cx="10" cy="70"  r="10" fill="#CB0000" />
+<circle cx="10" cy="140" r="10" fill="#CB0000" />
+<circle cx="10" cy="210" r="10" fill="#CB0000" />
+</svg>
