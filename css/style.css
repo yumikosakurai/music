@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -730,12 +731,12 @@ img {
   }
 }
 
-.p-top__massege {
+.p-top__concept {
   padding-top: 6.6rem;
   padding-bottom: 5.5rem;
 }
 
-.p-massege__plan {
+.p-concept__plan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -751,13 +752,13 @@ img {
           align-items: center;
 }
 @media (max-width: 767px) {
-  .p-massege__plan {
+  .p-concept__plan {
     font-size: 2.5rem;
     line-height: 1.6;
   }
 }
 
-.p-massege__sub {
+.p-concept__sub {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -772,7 +773,7 @@ img {
   margin-top: 1.7rem;
 }
 
-.p-massege__semicircle {
+.p-concept__semicircle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -786,44 +787,160 @@ img {
           align-items: center;
 }
 
-.p-massege__flow {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  -webkit-column-gap: 2.4rem;
-     -moz-column-gap: 2.4rem;
-          column-gap: 2.4rem;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.p-massege__side {
-  display: grid;
-  row-gap: 3rem;
-}
-
-.p-massege-side__left {
-  text-align: right;
-  padding-right: 3rem;
-}
-
-.p-massege-side__right {
-  text-align: left;
-  padding-left: 3rem;
-}
-
-.p-massege-flow__arrow {
+.p-concept-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
 }
 
-.p-massege-flow__arrow img {
-  height: 100%;
-  max-height: 100%;
-  width: auto;
+.p-concept-item__pri {
+  width: 46.2%;
+  text-align: right;
+}
+
+.p-concept-item__sec {
+  width: 46.2%;
+}
+
+.p-concept-item__circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #CB0000;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.p-concept__items {
+  position: relative;
+}
+
+.p-concept__items::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -3.888rem;
+  bottom: 1rem;
+  width: 3px;
+  background: #CB0000;
+  z-index: 0;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  left: 50%;
+  top: -3.4rem; /* ← 縦棒より“少し上” */
+  width: 2rem;
+  height: 3px;
+  background: #CB0000;
+}
+
+.arrow-left {
+  -webkit-transform: translateX(-80%) rotate(-47deg);
+          transform: translateX(-80%) rotate(-47deg);
+}
+
+.arrow-right {
+  -webkit-transform: translateX(-20%) rotate(47deg);
+          transform: translateX(-20%) rotate(47deg);
+}
+
+.p-message {
+  background: #CB0000;
+  padding-top: 6.8rem;
+  padding-bottom: 6rem;
+}
+
+.p-message__title, .p-message__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.p-message__title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.6666666667;
+}
+.p-message__subtitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6666666667;
+  margin-top: 3rem;
+}
+
+.p-reason-title {
+  padding-top: 6.4rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.6666666667;
+  text-align: center;
+}
+
+.p-reason__example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 5rem;
+     -moz-column-gap: 5rem;
+          column-gap: 5rem;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
   display: block;
+}
+
+.p-reason-example-one {
+  width: 100%;
+  max-width: 35rem;
+  margin-top: 2.8rem;
+}
+
+.p-reason-lesson {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 3.5rem;
+}
+.p-reason-lesson::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 74%;
+  width: 53.2rem;
+  height: 0.2rem;
+  background-color: #CB0000;
+  left: 70%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.p-reason__com {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.8333333333;
+  margin-top: 3.7rem;
 }/*# sourceMappingURL=style.css.map */
