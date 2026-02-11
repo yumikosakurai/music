@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -697,6 +696,30 @@ img {
           column-gap: 1.23rem;
 }
 
+.c-arrow {
+  display: inline-block;
+  position: absolute;
+  width: 2rem;
+  height: 3px;
+  background: #CB0000;
+}
+
+.c-arrow--left {
+  right: 0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: rotate(-47deg);
+          transform: rotate(-47deg);
+}
+
+.c-arrow--right {
+  left: 0;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: rotate(47deg);
+          transform: rotate(47deg);
+}
+
 .p-fv {
   position: relative;
 }
@@ -800,15 +823,18 @@ img {
   -webkit-column-gap: 3rem;
      -moz-column-gap: 3rem;
           column-gap: 3rem;
+  row-gap: 1.7rem;
 }
 
 .p-concept-item__pri {
   width: 46.2%;
   text-align: right;
+  margin-bottom: 1.7rem;
 }
 
 .p-concept-item__sec {
   width: 46.2%;
+  margin-bottom: 1.7rem;
 }
 
 .p-concept-item__circle {
@@ -819,6 +845,7 @@ img {
   position: relative;
   z-index: 2;
   margin: 0 auto;
+  margin-bottom: 1.7rem;
 }
 
 .p-concept__items {
@@ -832,30 +859,20 @@ img {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: -3.888rem;
-  bottom: 1rem;
+  bottom: 2.5rem;
   width: 3px;
   background: #CB0000;
   z-index: 0;
 }
 
-.arrow-left,
-.arrow-right {
+.p-concept__arrow {
   position: absolute;
   left: 50%;
-  top: -3.4rem; /* ← 縦棒より“少し上” */
-  width: 2rem;
-  height: 3px;
-  background: #CB0000;
-}
-
-.arrow-left {
-  -webkit-transform: translateX(-80%) rotate(-47deg);
-          transform: translateX(-80%) rotate(-47deg);
-}
-
-.arrow-right {
-  -webkit-transform: translateX(-20%) rotate(47deg);
-          transform: translateX(-20%) rotate(47deg);
+  top: -4rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  z-index: 1;
 }
 
 .p-message {
@@ -943,4 +960,146 @@ img {
   font-weight: 500;
   line-height: 1.8333333333;
   margin-top: 3.7rem;
+}
+
+.p-voice__room {
+  background: #CB0000;
+  padding-top: 4.4rem;
+  padding-bottom: 8rem;
+}
+
+.p-voice-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.6666666667;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.p-voice-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 3.5rem;
+     -moz-column-gap: 3.5rem;
+          column-gap: 3.5rem;
+}
+
+.p-voice-item {
+  margin-top: 3.6rem;
+}
+
+.p-voice-name {
+  margin-top: 1.7rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+.p-voice-results {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6666666667;
+  color: #FFFFFF;
+}
+
+.p-top-flow__room {
+  padding-top: 3.4rem;
+  padding-bottom: 10.772rem;
+}
+
+.p-top-flow__title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.6666666667;
+}
+
+.p-flow-block {
+  display: grid;
+  grid-template-columns: auto 15.4rem 1fr;
+  -webkit-column-gap: 3.8rem;
+     -moz-column-gap: 3.8rem;
+          column-gap: 3.8rem;
+  margin-top: 5.3rem;
+}
+
+.p-flow-sub-title {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #CB0000;
+  white-space: nowrap;
+}
+
+.p-flow-plan {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6666666667;
+}
+
+.p-flow-block__circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #CB0000;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  margin-bottom: 1.7rem;
+}
+
+.p-flow__blocks {
+  position: relative;
+}
+
+.p-flow__blocks::before {
+  content: "";
+  position: absolute;
+  left: 1%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 1rem;
+  bottom: -1.716rem;
+  width: 3px;
+  background: #CB0000;
+  z-index: 0;
+}
+
+.p-flow__arrow {
+  position: absolute;
+  left: 1%;
+  bottom: -1.7rem;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  z-index: 1;
+}
+
+.p-arrow {
+  display: inline-block;
+  position: absolute;
+  width: 2rem;
+  height: 3px;
+  background: #CB0000;
+}
+
+.p-arrow--left {
+  right: 0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: rotate(47deg);
+          transform: rotate(47deg);
+}
+
+.p-arrow--right {
+  left: 0;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: rotate(-47deg);
+          transform: rotate(-47deg);
 }/*# sourceMappingURL=style.css.map */
