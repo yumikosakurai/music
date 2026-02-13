@@ -1,7 +1,7 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-.p-fv {
+.p-top-fv {
   position: relative;
 
   &::before {
@@ -14,30 +14,45 @@
     background: rgba(0, 0, 0, 0.502);
     z-index: 1;
   }
-}
+  &__image {
+    img {
+      aspect-ratio: 1080 / 470;
+      object-fit: cover;
+
+      @include sp {
+       aspect-ratio: 375 / 550;
+ 
+      }
+    }
+
+  }
+
+  &__catch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+  
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: calc(60 / 40);
+  
+  @include sp {
+    width: 30rem;
+    font-size: 3rem;
+    line-height: calc(50 / 30);
+  
+  }
+  }
 
 
-.p-fv__catch {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}  
 
-  z-index: 2;
-  color: #fff;
-  text-align: center;
 
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: calc(60 / 40);
-
-@include sp {
-  width: 30rem;
-  font-size: 3rem;
-  line-height: calc(50 / 30);
-
-}
-}
 
 
 
