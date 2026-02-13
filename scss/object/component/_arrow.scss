@@ -1,21 +1,21 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-.c-arrow {
-  display: inline-block;
-  position: absolute;
-  width: 2rem;
-  height: 3px;
-  background: #CB0000;
-}
-.c-arrow--left {
-  right: 0;
-  transform-origin: right center;
-  transform: rotate(-47deg);
-}
+// .c-arrow {
+//   display: inline-block;
+//   position: absolute;
+//   width: 2rem;
+//   height: 3px;
+//   background: #CB0000;
+// }
+// .c-arrow--left {
+//   right: 0;
+//   transform-origin: right center;
+//   transform: rotate(-47deg);
+// }
 
-.c-arrow--right {
-  left: 0;
-  transform-origin: left center;
-  transform: rotate(47deg);
-}
+// .c-arrow--right {
+//   left: 0;
+//   transform-origin: left center;
+//   transform: rotate(47deg);
+// }

@@ -3,7 +3,7 @@
 
 .p-top-flow__room {
   padding-top: 3.4rem;
-  padding-bottom: 10.772rem;
+  // padding-bottom: 10.772rem;
 
 }
 
@@ -18,7 +18,7 @@
 //   display: grid;
 // }
 
-.p-flow-block {
+.p-top-flow-block {
   // display: flex;
   display: grid;
   grid-template-columns: auto 15.4rem 1fr;
@@ -26,7 +26,7 @@
   margin-top: 5.3rem;
 }
 
-.p-flow-sub-title {
+.p-top-flow-block__sub-title {
   // width: 15.4rem;
   flex-shrink: 0;
   font-size: 2.2rem;
@@ -37,13 +37,13 @@
 }
 
 
-.p-flow-plan {
+.p-top-flow-block__plan {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: calc(30 / 18);
 }
 
-.p-flow-block__circle {
+.p-top-flow-block__circle {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -55,11 +55,11 @@
   
 }
 
-.p-flow__blocks {
+.p-top-flow__blocks {
   position: relative;
 }
 
-.p-flow__blocks::before {
+.p-top-flow__blocks::before {
   content: "";
   position: absolute;
   left: 1%;
@@ -72,7 +72,7 @@
   z-index: 0;
 }
 
-.p-flow__arrow {
+.p-top-flow__arrow {
   position: absolute;
   left: 1%;
   bottom: -1.7rem;
@@ -102,6 +102,60 @@
 }
 
 
+.p-top-flow-block__circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #CB0000;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+
+  span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    // top: -3.888rem;
+    top: 1rem;
+    width: 0.3rem;
+    height: 40.655rem;
+    background: #CB0000;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      bottom: -0.2rem;
+      // left: 0;
+      width: 2rem;
+      height: 0.3rem;
+      background: #CB0000;
+      // background: #000;
 
 
+    }
 
+    &::before {
+      left: 0.01em;
+      transform: rotate(-45deg);
+      transform-origin: left top;
+      border-radius: 0 0.15rem 0.15rem 0;
+    
+
+    }
+
+    &::after {
+      // background: rgb(39, 3, 240);
+      right: 0.01rem;
+      transform: rotate(45deg);
+      transform-origin: right top;
+      border-radius: 0.15rem 0 0 0.15rem;
+    }
+
+
+  }
+
+
+}

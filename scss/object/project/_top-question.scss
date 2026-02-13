@@ -1,0 +1,37 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.p-top-question-room {
+  padding-top: 10.722rem;
+  // padding-bottom: 7.045rem;
+}
+
+.p-top-question__items {
+  width: 100%;
+  margin-top: 3.6rem;
+}
+
+.p-top-question__item {
+  width: 100%;
+  display: flex;
+  column-gap: 1rem;
+  border-top: 1px solid #000;
+  height: 6.5rem;
+  align-items: center;
+
+  &:last-child {
+    border-bottom: 1px solid #000;
+    /* 最後の線 */
+  }
+
+}
+.p-top-question-item-red {
+  background: rgba(203, 0, 0,9.8%);
+}
+
+.p-top-question-mark img {
+  width: 3.5rem;
+}
+.p-top-question-ans {
+  color: rgba(203, 0, 0, 1);
+}

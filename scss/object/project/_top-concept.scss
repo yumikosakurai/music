@@ -38,23 +38,53 @@
   align-items: center;
 }
 
+.p-concept__items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+}
+
+// .p-concept__items::before {
+//   content: "";
+//   position: absolute;
+//   left: 50%;
+//   transform: translateX(-50%);
+
+//   top: -3.888rem;
+//   bottom: 2.5rem;
+//   width: 3px;
+//   background: #CB0000;
+//   z-index: 0;
+// }
+
+
+
 .p-concept-item {
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 3rem;
-  row-gap: 1.7rem;
 }
 
 .p-concept-item__pri {
   width: 46.2%;
   text-align: right;
-  margin-bottom: 1.7rem;
+  // margin-bottom: 1.7rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: calc(50 / 25);
+  color: #CB0000;
+
 }
 
 .p-concept-item__sec {
   width: 46.2%;
-  margin-bottom: 1.7rem;
+  // margin-bottom: 1.7rem;
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: calc(50 / 23);
+
 }
 
 .p-concept-item__circle {
@@ -65,9 +95,57 @@
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  margin-bottom: 1.7rem;
-  
+  // margin-bottom: 1.7rem;
+
+  span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    // top: -3.888rem;
+    bottom: 1rem;
+    width: 0.3rem;
+    height: 18rem;
+    background: #CB0000;
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: -0.2rem;
+      // left: 0;
+      width: 2rem;
+      height: 0.3rem;
+      background: #CB0000;
+      // background: #000;
+
+
+    }
+
+    &::before {
+      left: 0.15rem;
+      transform: rotate(45deg);
+      transform-origin: left top;
+      border-radius: 0 0.15rem 0.15rem 0;
+    
+
+    }
+
+    &::after {
+      // background: #ff6;
+      right: 0.15rem;
+      transform: rotate(-45deg);
+      transform-origin: right top;
+      border-radius: 0.15rem 0 0 0.15rem;
+    }
+
+
+  }
+
+
 }
+
 
 
 
@@ -84,40 +162,6 @@
 //   background: #cb0000;
 // }
 
-.p-concept__items {
-  position: relative;
-}
-
-.p-concept__items::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-
-  top: -3.888rem;
-  bottom: 2.5rem;
-  width: 3px;
-  background: #CB0000;
-  z-index: 0;
-}
-
-
-// .arrow-left,
-// .arrow-right {
-//   position: absolute;
-//   left: 50%;
-//   top: -3.4rem;        
-//   width: 2rem;
-//   height: 3px;
-//   background: #CB0000;
-// }
-// .arrow-left {
-//   transform: translateX(-80%) rotate(-47deg);
-// }
-
-// .arrow-right {
-//   transform: translateX(-20%)rotate(47deg);
-// }
 
 .p-concept__arrow {
   position: absolute;

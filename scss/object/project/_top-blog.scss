@@ -1,0 +1,83 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.p-top-blog-room {
+  padding-top: 7.045rem;
+  padding-bottom: 14.5rem;
+}
+
+
+.p-top-blog-items {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 5rem;
+}
+
+.p-top-blog-photo {
+  position: relative;
+  // aspect-ratio: 4 / 3;  // デザインに合わせる
+  // overflow: hidden;
+
+}
+
+.p-top-blog-word img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-photo-pop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8rem;
+  height: 3rem;
+  background: #CB0000;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: calc(25 / 15);
+  text-align: center;
+}
+
+.p-top-blog-ad {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: calc(25 / 20)
+}
+
+.p-top-blog-word {
+  margin-top: 3.7rem;
+}
+
+.p-top-blog-time {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: calc(30 / 17);
+  text-align: right;
+}
+.p-top-blog-word {
+  text-align: right;
+  
+}
+.p-top-blog-circle {
+  width: 6.8rem;
+  height: 100%;
+  text-align: right;
+  // display: flex;
+  // justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,12 +1,12 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-.p-message {
+.p-top-message {
   background: #CB0000;
   padding-top: 6.8rem;
   padding-bottom: 6rem;
 }
-.p-message{
+.p-top-message {
 
   &__title,
   &__subtitle {
