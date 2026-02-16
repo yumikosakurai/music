@@ -778,6 +778,9 @@ img {
   border-radius: 50%;
   display: grid;
   place-content: center;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .c-top-btn__arrow {
   width: 2.4rem;
@@ -1088,6 +1091,17 @@ img {
   text-align: center;
 }
 
+.p-top-voice__items {
+  position: relative;
+  overflow: hidden;
+}
+
+.p-top-voice-item__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .p-top-voice-item {
   margin-top: 3.6rem;
 }
@@ -1108,6 +1122,85 @@ img {
   color: #FFFFFF;
 }
 
+/* スライダーの親 */
+.p-top-voice__slider {
+  position: relative;
+}
+
+/* 矢印の共通 */
+.voice-button-prev,
+.voice-button-next {
+  width: 48px;
+  height: 48px;
+  z-index: 10;
+}
+
+/* 左 */
+.voice-button-prev {
+  left: -60px;
+}
+
+/* 右 */
+.voice-button-next {
+  right: -60px;
+}
+
+/* 中央配置 */
+.voice-button-prev,
+.voice-button-next {
+  top: 75%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* スライダーの外枠だけはみ出し許可 */
+.p-top-voice__slider {
+  position: relative;
+  overflow: visible;
+}
+
+/* swiper本体は隠す（重要） */
+.p-top-voice__items {
+  overflow: hidden;
+}
+
+/* デフォルト矢印を消す */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: none;
+}
+
+/* 共通 */
+.voice-button-prev,
+.voice-button-next {
+  position: absolute;
+  width: 2.984rem;
+  height: 2.024rem;
+}
+
+右矢印 .voice-button-next {
+  position: absolute;
+  top: 75%;
+  right: -60px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+}
+
+左矢印 .voice-button-prev {
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+}
+
+/* ===== 左矢印 ===== */
+/* 上 */
+/* 下 */
 .p-top-flow__room {
   padding-top: 3.4rem;
 }
@@ -1379,4 +1472,63 @@ img {
 }
 .p-fixed-area.is-absolite {
   position: absolute;
+}
+
+.p-fixed-area {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.p-fixed-area.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.p-plan-fv {
+  position: relative;
+}
+.p-plan-fv::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.502);
+  z-index: 1;
+}
+.p-plan-fv__catch {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .p-plan-fv__catch {
+    width: 30rem;
+    font-size: 3rem;
+    line-height: 1.6666666667;
+  }
+}
+
+.c-breadcrumbs {
+  height: 5rem;
+  background: rgb(232, 232, 232);
+}
+
+.c-breadcrumbs ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
 }/*# sourceMappingURL=style.css.map */
