@@ -14,12 +14,12 @@
   color: #FFFFFF;
 
   &--fixed {
-  width: 30rem;
-  height: 6rem;
-  font-size: 2rem;
-  letter-spacing: 0.2em;
+    width: 30rem;
+    height: 6rem;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
 
-  
+
   }
 }
 
@@ -30,8 +30,22 @@
   border-radius: 50%;
   display: grid;
   place-content: center;
+  // row-gap: 3rem;
+  // align-items: center;
+
+
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+
+
   &__arrow {
     width: 2.4rem;
-  
+
   }
+
 }
+
+
+
+
