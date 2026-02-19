@@ -3,25 +3,25 @@
 
 @include sp {
   .pc-only {
-    display: none!important;
+    display: none !important;
   }
 }
 
 @include pc {
   .sp-only {
-    display: none!important;
+    display: none !important;
   }
 }
 
 body {
   font: {
-    family: "YuGothic", "Noto Sans JP","Source Han Sans", "M+ FONTS";
+    family: "YuGothic", "Noto Sans JP", "Source Han Sans", "M+ FONTS";
     optical-sizing: auto;
     weight: 500;
     style: normal;
     size: 1.8rem;
   }
-  
+
   letter-spacing: 0;
   color: #000000;
   line-height: calc(30 / 18);
@@ -41,13 +41,14 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   font-size: 10px;
+
   @media (max-width: 940px) and (min-width: 768px) {
-    font-size: vw(10,940);
+    font-size: vw(10, 940);
   }
 
   @include sp {
     scroll-padding-top: 50px;
-    font-size: vw(10,375);
+    font-size: vw(10, 375);
   }
 }
 
@@ -55,13 +56,15 @@ html,
 body {
   overflow-x: hidden;
 }
+
 body {
   padding-top: 8rem;
 
   @include sp {
-     padding-top: 5rem;
+    padding-top: 50px;
   }
 }
+
 
 
 main {
@@ -87,22 +90,20 @@ img {
 }
 
 .inner {
-  // width: 100%;
+  width: 100%;
   // max-width: 940px;
   // padding-inline: vw(30, 1080);
   // width: min(vw(880,940),880px);
-  width: 88rem;
+  max-width: 88rem;
   margin: 0 auto;
 
+
+
   @include sp {
-    max-width: 767px;
-    // padding-inline: 20px !important;
-    margin-inline: auto;
+    width: 100%;
     margin: 0 auto;
+    padding-inline: 2rem !important;
   }
- 
+
 }
-
-
-
 

@@ -8,6 +8,21 @@ jQuery(function ($) {
 	});
 });
 
+	// ハンバーガー
+	$(".hamburger").click(function () {
+		$(this).toggleClass("is-open");
+		$(".l-header__nav").toggleClass("is-open");
+	});
+
+	$(".l-header-nav-link").click(function () {
+		$(".hamburger").removeClass("is-open");
+		$(".l-header__nav").removeClass("is-open");
+	});
+
+
+
+//  voiceのスワイパー
+
 document.addEventListener("DOMContentLoaded", function () {
 	const swiper = new Swiper(".p-top-voice__items", {
 		loop: true,
@@ -30,21 +45,43 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const fv = document.querySelector(".p-top-fv");
-  const fixedArea = document.querySelector(".p-fixed-area");
+// トップに戻るボタンがfvで消える
 
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        // FVが見えている間は非表示
-        fixedArea.classList.add("is-hidden");
-      } else {
-        // FVが見えなくなったら表示
-        fixedArea.classList.remove("is-hidden");
-      }
-    });
+document.addEventListener("DOMContentLoaded", function () {
+	const fv = document.querySelector(".p-top-fv");
+	const fixedArea = document.querySelector(".p-fixed-area");
+
+	const observer = new IntersectionObserver(function (entries) {
+		entries.forEach(function (entry) {
+			if (entry.isIntersecting) {
+				// FVが見えている間は非表示
+				fixedArea.classList.add("is-hidden");
+			} else {
+				// FVが見えなくなったら表示
+				fixedArea.classList.remove("is-hidden");
+			}
+		});
+	});
+
+	observer.observe(fv);
+});
+
+//  よくある質問のアコーディオン
+
+jQuery(function ($) {
+
+  $(".p-top-question-item").on("click", function () {
+
+    const answer = $(this).find(".p-top-question-item__answer");
+
+    // 他を閉じる
+    $(".p-top-question-item__answer").not(answer).slideUp(300);
+    $(".p-top-question-item").not(this).removeClass("is-open");
+
+    // 今のを開閉
+    answer.slideToggle(300);
+    $(this).toggleClass("is-open");
+
   });
 
-  observer.observe(fv);
 });

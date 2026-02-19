@@ -1,10 +1,20 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-.p-top-voice__room {
+.p-top-voice {
   background: #CB0000;
+
+}
+
+.p-top-voice__room {
   padding-top: 4.4rem;
   padding-bottom: 8rem;
+
+  @include sp {
+    padding-top: 4.6rem;
+    padding-bottom: 5rem;
+
+  }
 }
 
 .p-top-voice-title {
@@ -13,6 +23,12 @@
   line-height: calc(50 / 30);
   color: #FFFFFF;
   text-align: center;
+
+  @include sp {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+
+  }
 }
 
 // .p-top-voice__items {
@@ -29,10 +45,30 @@
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
 }
+/* 画像はズーム */
+.p-top-voice-item:hover .p-top-voice-item__image:hover img {
+  transform: scale(1.1); // ← 1.1倍
+}
+/* テキストは少し透過 */
+.p-top-voice-item:hover .p-top-voice-item__text,
+.p-top-voice-item:hover .p-top-voice-name {
+  opacity: 0.6;
+}
+.p-top-voice-item__image img,
+.p-top-voice-item__text,
+.p-top-voice-name {
+  transition: 0.3s ease;
+}
+
 
 .p-top-voice-item {
   margin-top: 3.6rem;
+    @include sp {
+    margin-top: 3.9rem;
+  }
+
 }
 
 .p-top-voice-name {
@@ -42,6 +78,17 @@
   line-height: calc(33 / 22);
   color: #FFFFFF;
 
+  @include sp {
+    margin-top: 2.7rem;
+  }
+}
+
+.p-top-voice-item__text {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: calc(30 / 18);
+  color: #FFFFFF;
 }
 
 .p-top-voice-results {
@@ -65,21 +112,29 @@
 // }
 
 /* 矢印の共通 */
-.voice-button-prev,
-.voice-button-next {
-  width: 48px;
-  height: 48px;
-  z-index: 10;
-}
+// .voice-button-prev,
+// .voice-button-next {
+//   width: 48px;
+//   height: 48px;
+//   z-index: 10;
+// }
 
 /* 左 */
 .voice-button-prev {
   left: -60px;
+
+  @include sp {
+    left: -0.1rem;
+  }
 }
 
 /* 右 */
 .voice-button-next {
   right: -60px;
+
+  @include sp {
+    right: -0.1rem;
+  }
 }
 
 /* 中央配置 */
@@ -87,6 +142,12 @@
 .voice-button-next {
   top: 75%;
   transform: translateY(-50%);
+
+  @include sp {
+    top: 60%;
+    transform: translateY(-50%);
+
+  }
 }
 
 /* スライダーの外枠だけはみ出し許可 */
@@ -113,6 +174,7 @@
   position: absolute;
   width: 2.984rem;
   height: 2.024rem;
+  z-index: 10;
 }
 
 
@@ -126,10 +188,19 @@
   height: 48px;
 }
 
+左矢印 .voice-button-prev {
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+}
+
 
 
 // .voice-button-next::before {
-//   content: "";
+//   content: "";  
 //   position: absolute;
 //   top: 50%;
 //   left: 50%;
@@ -141,15 +212,6 @@
 //   border-radius: 0.35rem 0.35rem 0.35rem 0.35rem;
 
 // }
-
-左矢印 .voice-button-prev {
-  position: absolute;
-  top: 50%;
-  left: -60px;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-}
 
 
 
