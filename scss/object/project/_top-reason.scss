@@ -13,6 +13,10 @@
   display: flex;
   column-gap: 5rem;
   position: relative;
+  @include sp {
+    display: block;
+
+  }
 }
 img {
   width: 100%;
@@ -42,7 +46,17 @@ img {
     background-color: #CB0000;
     left: 70%;
     transform: translateX(-50%);
+
+    @include sp {
+      display: none;
+    }
 }
+
+}
+.p-top-reason-lesson h3 {
+  @include sp {
+    border-bottom: 0.2rem solid #CB0000;
+  }
 }
 
 .p-top-reason__com {
