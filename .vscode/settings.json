@@ -1,16 +1,27 @@
-	{
-    "liveSassCompile.settings.formats": [
-      {
-        "format": "expanded",
-        "extensionName": ".css",
-        "savePath": "~../css"
-      }
-    ],
-    "liveServer.settings.port": 5501,
+	// {
+  //   "liveSassCompile.settings.formats": [
+  //     {
+  //       "format": "expanded",
+  //       "extensionName": ".css",
+  //       "savePath": "~../css"
+  //     }
+  //   ],
+  //   "liveServer.settings.port": 5501,
 
-    "git.enableSmartCommit": false
+  //   "git.enableSmartCommit": false
 
-  }
+  // }
 
   
 
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    }
+  ],
+  "liveServer.settings.port": 5501,
+  "git.enableSmartCommit": false
+}

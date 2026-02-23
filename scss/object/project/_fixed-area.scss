@@ -10,10 +10,15 @@
   flex-direction: column;
   row-gap: 3rem;
   align-items: center;
-  // background: #ff6;
+
+  @include sp {
+    right: 50%;
+    transform: translateX(50%);
+    align-items: center;
+  }
 
   
-  &.is-absolite {
+  &.is-absolute {
     position: absolute;
   }
 }
@@ -27,3 +32,5 @@
     pointer-events: none;
   }
 }
+
+

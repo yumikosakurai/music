@@ -42,11 +42,13 @@
   // row-gap: 3rem;
   // align-items: center;
 
-
   opacity: 1;
   transition: opacity 0.3s ease;
 
-
+@include sp {
+  align-self: flex-end;
+  margin-right: 2rem; // 必要なら余白調整
+}
 
   &__arrow {
     width: 2.4rem;
