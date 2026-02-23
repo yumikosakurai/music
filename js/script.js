@@ -85,3 +85,24 @@ jQuery(function ($) {
   });
 
 });
+      // footerの前で固定
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const fixedArea = document.querySelector('.p-fixed-area');
+  const footer = document.querySelector('footer');
+
+  if (!fixedArea || !footer) return;
+
+  window.addEventListener('scroll', () => {
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (footerTop <= windowHeight) {
+      fixedArea.classList.add('is-absolute');
+    } else {
+      fixedArea.classList.remove('is-absolute');
+    }
+  });
+
+});
