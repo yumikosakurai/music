@@ -3,7 +3,7 @@
 
 .p-top-blog-room {
   padding-top: 7.045rem;
-  padding-bottom: 14.5rem;
+  padding-bottom: 21.12rem;
 }
 
 
@@ -11,6 +11,7 @@
   display: flex;
   align-items: flex-start;
   column-gap: 5rem;
+
   @include sp {
     display: block;
   }
@@ -49,20 +50,23 @@
   line-height: calc(25 / 20)
 }
 
-.p-top-blog-word {
-  margin-top: 3.7rem;
-}
-
 .p-top-blog-time {
   font-size: 1.7rem;
   font-weight: 500;
   line-height: calc(30 / 17);
   text-align: right;
 }
-.p-top-blog-word {
+.p-top-blog-link {
   text-align: right;
-  
+
 }
+.p-top-blog-word {
+  // display: inline-block;
+  margin-top: 3.7rem;
+  border-bottom: 0.01rem solid rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
 .p-top-blog-circle {
   width: 6.8rem;
   height: 100%;
@@ -70,17 +74,3 @@
   // display: flex;
   // justify-content: flex-end;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

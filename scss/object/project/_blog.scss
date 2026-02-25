@@ -1,0 +1,168 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+
+.p-blog-list__items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6.7rem;
+  gap: 7rem;
+
+  @include sp {
+    margin-top: 3.9rem;
+    row-gap: 3.9rem;
+
+  }
+}
+
+
+.p-blog-list {
+  &__body {
+    margin-left: 5rem;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+    @include sp {
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    // row-gap: 7rem;
+
+
+    @include sp {
+      flex-direction: column;
+      // row-gap: 3.9rem;
+
+    }
+  }
+
+  &__image {
+    flex: 0 0 29.5%;
+    aspect-ratio: 260 / 184;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block; // ← これ超重要
+
+      picture {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: calc(25 / 20);
+
+    @include sp {
+      margin-left: 0;
+    }
+  }
+
+  &__date {
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: calc(30 / 17);
+    // margin-left: 5rem;
+    margin-top: 0.3rem;
+
+    @include sp {
+      margin-left: 0;
+      display: block;
+      text-align: right;
+    }
+  }
+
+  &__date {
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: calc(30 / 17);
+    margin-top: 0.3rem;
+
+    @include sp {
+      margin-left: 0;
+      display: block;
+      text-align: right;
+    }
+  }
+
+
+}
+
+
+.p-top-blog-photo {
+  position: relative;
+}
+
+.p-photo-pop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8rem;
+  height: 3rem;
+  background: #CB0000;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: calc(25 / 15);
+  text-align: center;
+}
+
+.p-pagination__list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+
+
+    &:hover {
+      background: #333;
+      color: #fff;
+    }
+
+  }
+}
+.p-pagination {
+  margin-top: 7rem;
+  margin-bottom: 21rem;
+
+  @include sp {
+    margin-top: 5.9rem;
+    margin-bottom: 14.3rem;
+  }
+}
+
+
+/* 現在のページ */
+.p-pagination__list .is-active {
+  background: #333;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
