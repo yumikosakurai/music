@@ -5,11 +5,14 @@
   .pc-only {
     display: none !important;
   }
+  .sp-only {
+    display: inline;
+  }
 }
 
 @include pc {
   .sp-only {
-    display: none !important;
+    display: none;
   }
 }
 

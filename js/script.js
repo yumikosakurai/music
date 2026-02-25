@@ -8,18 +8,16 @@ jQuery(function ($) {
 	});
 });
 
-	// ハンバーガー
-	$(".hamburger").click(function () {
-		$(this).toggleClass("is-open");
-		$(".l-header__nav").toggleClass("is-open");
-	});
+// ハンバーガー
+$(".hamburger").click(function () {
+	$(this).toggleClass("is-open");
+	$(".l-header__nav").toggleClass("is-open");
+});
 
-	$(".l-header-nav-link").click(function () {
-		$(".hamburger").removeClass("is-open");
-		$(".l-header__nav").removeClass("is-open");
-	});
-
-
+$(".l-header-nav-link").click(function () {
+	$(".hamburger").removeClass("is-open");
+	$(".l-header__nav").removeClass("is-open");
+});
 
 //  voiceのスワイパー
 
@@ -47,62 +45,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // トップに戻るボタンがfvで消える
 
-document.addEventListener("DOMContentLoaded", function () {
-	const fv = document.querySelector(".p-top-fv");
-	const fixedArea = document.querySelector(".p-fixed-area");
+// document.addEventListener("DOMContentLoaded", function () {
+// 	const fv = document.querySelector(".p-top-fv");
+// 	const fixedArea = document.querySelector(".p-fixed-area");
 
-	const observer = new IntersectionObserver(function (entries) {
-		entries.forEach(function (entry) {
-			if (entry.isIntersecting) {
-				// FVが見えている間は非表示
-				fixedArea.classList.add("is-hidden");
-			} else {
-				// FVが見えなくなったら表示
-				fixedArea.classList.remove("is-hidden");
-			}
-		});
-	});
+// 	const observer = new IntersectionObserver(function (entries) {
+// 		entries.forEach(function (entry) {
+// 			if (entry.isIntersecting) {
+// 				// FVが見えている間は非表示
+// 				fixedArea.classList.add("is-hidden");
+// 			} else {
+// 				// FVが見えなくなったら表示
+// 				fixedArea.classList.remove("is-hidden");
+// 			}
+// 		});
+// 	});
 
-	observer.observe(fv);
-});
+// 	observer.observe(fv);
+// });
 
 //  よくある質問のアコーディオン
 
 jQuery(function ($) {
+	$(".p-top-question-item").on("click", function () {
+		const answer = $(this).find(".p-top-question-item__answer");
 
-  $(".p-top-question-item").on("click", function () {
+		// 他を閉じる
+		$(".p-top-question-item__answer").not(answer).slideUp(300);
+		$(".p-top-question-item").not(this).removeClass("is-open");
 
-    const answer = $(this).find(".p-top-question-item__answer");
-
-    // 他を閉じる
-    $(".p-top-question-item__answer").not(answer).slideUp(300);
-    $(".p-top-question-item").not(this).removeClass("is-open");
-
-    // 今のを開閉
-    answer.slideToggle(300);
-    $(this).toggleClass("is-open");
-
-  });
-
+		// 今のを開閉
+		answer.slideToggle(300);
+		$(this).toggleClass("is-open");
+	});
 });
-      // footerの前で固定
+// footerの前で固定
 
 document.addEventListener("DOMContentLoaded", function () {
+	const fixedArea = document.querySelector(".p-fixed-area");
+	const footer = document.querySelector("footer");
 
-  const fixedArea = document.querySelector('.p-fixed-area');
-  const footer = document.querySelector('footer');
+	if (!fixedArea || !footer) return;
 
-  if (!fixedArea || !footer) return;
-
-  window.addEventListener('scroll', () => {
-    const footerTop = footer.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (footerTop <= windowHeight) {
-      fixedArea.classList.add('is-absolute');
-    } else {
-      fixedArea.classList.remove('is-absolute');
-    }
-  });
-
+	window.addEventListener("scroll", () => {
+		const footerTop = footer.getBoundingClientRect().top;
+		const windowHeight = window.innerHeight;
+		const scrollY = window.scrollY || window.pageYOffset;
+		if (footerTop <= windowHeight) {
+			fixedArea.classList.add("is-absolute");
+		} else {
+			fixedArea.classList.remove("is-absolute");
+		}
+		if(scrollY > 100) {
+			fixedArea.classList.remove("is-hidden");
+		} else {
+			fixedArea.classList.add("is-hidden");
+		}
+	});
 });

@@ -38,117 +38,317 @@
   line-height: calc(60 / 25);
 }
 
-.p-plan-price-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 100%;
-  text-align: center;
-  margin-top: 6.7rem;
-}
+.p-plan {
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    margin-top: 6.7rem;
+  }
 
-.p-plan-price-item-text {
-  display: flex;
-  column-gap: 7.9rem;
-  justify-content: center;
-  align-items: center;
-  margin-top: 4rem;
+  &__items {
+    display: flex;
+    column-gap: 7.9rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
 
-  @include sp {
-    flex-direction: column; // 縦並び
-    align-items: center; // 横方向中央
-    gap: 1.975rem; // ← ここで間を開ける
+    @include sp {
+      flex-direction: column; // 縦並び
+      align-items: center; // 横方向中央
+      gap: 1.975rem; // ← ここで間を開ける
+    }
+
+  }
+
+  &__item {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: calc(33 / 20);
+    width: 21rem;
+    height: 6rem;
+    background: #CB0000;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__plus {
+    position: relative;
+    width: 1.85rem;
+    height: 1.85rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 0.3rem;
+      background: #000000;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.3rem;
+      height: 100%;
+      background: #000000;
+    }
+
+  }
+
+  &__explanation {
+    margin-top: 4.8rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: calc(30 / 18);
+    justify-content: center;
+    align-items: center;
   }
 }
 
-
-.p-plan-price-item-left,
-.p-plan-price-item-right {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: calc(33 / 20);
-  width: 21rem;
-  height: 6rem;
-  background: #CB0000;
-  color: #FFFFFF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.p-plan-price-item-plus {
-  position: relative;
-  width: 1.85rem;
-  height: 1.85rem;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 0.3rem;
-    background: #000000;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0.3rem;
-    height: 100%;
-    background: #000000;
-  }
-}
-
-.p-plan-price-item-explanation {
-  margin-top: 4.8rem;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: calc(30 / 18);
-  justify-content: center;
-  align-items: center;
-}
 
 // -- ---------プラン内容・月額料金--------- 
-
-
-.p-plan-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 100%;
-  text-align: center;
-  margin-top: 5.7rem;
-
-}
-
-.p-plan-title {
-  // width: 88rem;
-  // border-collapse: collapse;
-  // margin: 0 auto;
-  // table-layout: fixed;
-  // font-size: 1.7rem;
-  // font-weight: 500;
-  // line-height: calc(25 / 17);
-  // margin-top: 5.7rem;
-  // text-align: center;
-
-
-  th {
-    text-align: left;
-  }
-
-  td {
-    height: 100%;
+.p-price {
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 100%;
     text-align: center;
+    margin-top: 5.7rem;
+
+    @include sp {
+      margin-top: 3.8rem;
+    }
   }
+
+  &__table {
+    margin-top: 5rem;
+
+    @include sp {
+      overflow-x: scroll;
+      padding-bottom: 2rem;
+      margin-top: 2.2rem;
+
+      &::-webkit-scrollbar {
+        height: 25px;
+        background: rgba(80, 80, 80, 0.15);
+        /* 横スクロールなのでheightを指定 */
+      }
+
+      /* 2. スクロールバーの背景（トラック） */
+      // &::-webkit-scrollbar-track {
+      //   background: rgba(80, 80, 80, 0.15);
+      //   margin: 10px 0; // ← 上下10pxの余白
+      // }
+
+      /* 3. スクロールバーのつまみ（サム） */
+      &::-webkit-scrollbar-thumb {
+        background: rgba(80, 80, 80, 0.25);
+        min-height: 23px;
+
+      }
+
+
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border-bottom: 0.05rem solid rgba(0, 0, 0, 1);
+
+      @include sp {
+        width: 67rem;
+
+      }
+
+
+      tr {
+
+        th,
+        td {
+          width: 25%;
+        }
+
+      }
+
+      thead {
+        tr {
+          height: 8rem;
+
+
+          th {
+            text-align: center;
+            vertical-align: bottom;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: calc(33 / 20);
+
+            @include sp {
+              line-height: calc(25 / 20);
+
+            }
+
+            p {
+              height: 5rem;
+              background: #000;
+              color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              justify-content: center;
+
+              @include sp {
+                height: 6.6rem;
+              }
+            }
+
+            &.th-recomond {
+              height: 8rem;
+              padding: 0;
+              background: #CB0000;
+              color: #fff;
+
+              @include sp {
+                height: 8.9rem;
+                line-height: 1.2;
+
+              }
+            }
+
+
+          }
+
+        }
+      }
+    }
+  }
+
+  .th-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    span:first-child {
+      font-size: 1.7rem;
+    }
+
+    span:last-child {
+      font-size: 2rem;
+    }
+  }
+
+
+  tbody {
+    border-top: 0.05rem solid rgba(0, 0, 0, 1);
+
+    tr {
+      height: 8.5rem;
+
+      &:nth-of-type(even) {
+        background: rgba(80, 80, 80, 0.15);
+      }
+
+      th,
+      td {
+        vertical-align: middle;
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: calc(25 / 17);
+        @include sp {
+          font-size: 1.6rem;
+          line-height: calc(25 / 16);
+        }
+      }
+
+      th {
+        padding-inline: 2rem;
+        @include sp {
+          padding-inline: 1rem;
+        }
+
+        &.th-thick {
+          font-size: 1.7rem;
+          font-weight: 700;
+          line-height: calc(30 / 17);
+        }
+
+      }
+      
+      td {
+        border-left: 0.05rem solid rgba(0, 0, 0, 1);
+        text-align: center;
+
+
+        &.color-red {
+          color: #CB0000;
+        }
+
+        &.td-thick {
+          font-size: 2.2rem;
+          font-weight: 700;
+          line-height: calc(33 / 22);
+
+        }
+
+      }
+    }
+  }
+
+  &__note {
+    margin-top: 2.85rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: calc(25 / 17);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 22.3rem;
+
+  }
+
+
+
 }
 
-.p-plan-table {
-  margin-top: 5rem;
-}
+
+
+
+
+
+// .p-plan-table__title {
+//   // width: 88rem;
+//   // border-collapse: collapse;
+//   // margin: 0 auto;
+//   // table-layout: fixed;
+//   // font-size: 1.7rem;
+//   // font-weight: 500;
+//   // line-height: calc(25 / 17);
+//   // margin-top: 5.7rem;
+//   // text-align: center;
+
+
+//   th {
+//     text-align: left;
+//   }
+
+//   td {
+//     height: 100%;
+//     text-align: center;
+//   }
+// }
+
 
 @include sp {
 
@@ -188,9 +388,9 @@
 
 
   th {
-    padding: 1.1rem 3rem 0.6rem;
-    height: 3rem;
-    white-space: nowrap;
+    // padding: 1.1rem 3rem 0.6rem;
+    // height: 3rem;
+    // white-space: nowrap;
 
     @include sp {
       height: 2.3rem;
@@ -198,41 +398,41 @@
   }
 
   .p-recommend {
-    height: 3rem;
-    background-color: #CB0000;
-    color: #FFFFFF;
-    font-size: 1.7rem;
-    font-weight: 700;
-    line-height: calc(33 / 17);
-    padding: 0;
+    // height: 3rem;
+    // background-color: #CB0000;
+    // color: #FFFFFF;
+    // font-size: 1.7rem;
+    // font-weight: 700;
+    // line-height: calc(33 / 17);
+    // padding: 0;
 
     @include sp {
       height: 2.3rem;
     }
   }
 
-  .p-recommend__inner {
-    display: flex;
-    justify-content: center; // 横中央
-    align-items: flex-end; // 下寄せ
-    height: 100%;
-  }
+  // .p-recommend__inner {
+  //   display: flex;
+  //   justify-content: center; // 横中央
+  //   align-items: flex-end; // 下寄せ
+  //   height: 100%;
+  // }
 }
 
 
 .p-plan-table__plan-row {
 
-  th {
-    text-align: center; // 横中央
-    vertical-align: middle; // 縦中央
-    line-height: 1.2;
-  }
-  
+  // th {
+  //   text-align: center; // 横中央
+  //   vertical-align: middle; // 縦中央
+  //   line-height: 1.2;
+  // }
+
   .p-basic,
   .p-premium {
-    height: 5rem;
-    background: #000;
-    color: #FFFFFF;
+    // height: 5rem;
+    // background: #000;
+    // color: #FFFFFF;
 
     @include sp {
       height: 6.6rem;
@@ -240,10 +440,10 @@
     }
   }
 
-  .p-standard {
-    background: #CB0000;
-    color: #FFFFFF;
-  }
+  // .p-standard {
+  //   background: #CB0000;
+  //   color: #FFFFFF;
+  // }
 }
 
 
@@ -255,108 +455,108 @@
   //   border-top: 0.5px solid #000;
   // }
 
-  .p-plan-table__row th {
-    border-top: 0.5px solid #000;
-  }
+  // .p-plan-table__row th {
+  //   border-top: 0.5px solid #000;
+  // }
 
-  // 一番下
-  tr:last-child {
-    border-bottom: 0.5px solid #000;
-  }
+  // // 一番下
+  // tr:last-child {
+  //   border-bottom: 0.5px solid #000;
+  // }
 
-  tr:nth-child(even) {
-    background: rgba(80, 80, 80, 0.15);
-  }
+  // tr:nth-child(even) {
+  //   background: rgba(80, 80, 80, 0.15);
+  // }
 
-  th {
-    display: flex;
-    padding-top: 3.2rem;
-    padding-bottom: 2.8rem;
-    padding-left: 2rem;
-    text-align: left;
-    font-size: 1.7rem;
-    font-weight: 500;
-    line-height: calc(25 / 17);
-    @include sp {
-      white-space: nowrap;
-    }
-  }
+  // th {
+  //   display: flex;
+  //   padding-top: 3.2rem;
+  //   padding-bottom: 2.8rem;
+  //   padding-left: 2rem;
+  //   text-align: left;
+  //   font-size: 1.7rem;
+  //   font-weight: 500;
+  //   line-height: calc(25 / 17);
+
+  //   @include sp {
+  //     white-space: nowrap;
+  //   }
+  // }
 
 
-  td {
-    padding-top: 2.2rem;
-    padding-bottom: 1.5rem;
-    text-align: center;
-  }
+  // td {
+  //   padding-top: 2.2rem;
+  //   padding-bottom: 1.5rem;
+  //   text-align: center;
+  // }
 
-  th,
-  td {
-    border-right: 1px solid #000000;
+  // th,
+  // td {
+  //   border-right: 1px solid #000000;
 
-    &:last-child {
-      border-right: none;
-    }
-  }
+  //   &:last-child {
+  //     border-right: none;
+  //   }
+  // }
 
 }
 
 .p-plan-table__row {
 
-  th {
-    padding-top: 3.2rem;
-    padding-bottom: 2.8rem;
-    padding-left: 2rem;
-    // color: #FFFFFF;
+  // th {
+  //   padding-top: 3.2rem;
+  //   padding-bottom: 2.8rem;
+  //   padding-left: 2rem;
+  //   // color: #FFFFFF;
 
-  }
+  // }
 
-  th {
-    text-align: left;
-  }
+  // th {
+  //   text-align: left;
+  // }
 
-  td {
-    text-align: center;
-  }
+  // td {
+  //   text-align: center;
+  // }
 }
 
-.p-circle {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 1);
-}
+// .p-circle {
+//   display: inline-block;
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   border-radius: 50%;
+//   background: rgba(0, 0, 0, 1);
+// }
 
-.p-red-circle {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background-color: rgba(203, 0, 0, 1);
-}
+// .p-red-circle {
+//   display: inline-block;
+//   width: 1.5rem;
+//   height: 1.5rem;
+//   border-radius: 50%;
+//   background-color: rgba(203, 0, 0, 1);
+// }
 
-.p-icon-cell {
-  text-align: center;
-  vertical-align: middle;
-  line-height: 1;
-}
-
-
-.p-hyphen {
-  display: inline-block;
-  width: 3rem;
-  height: 0.1rem;
-  background-color: rgba(112, 112, 112, 1);
-}
+// .p-icon-cell {
+//   text-align: center;
+//   vertical-align: middle;
+//   line-height: 1;
+// }
 
 
-.p-plan-note {
-  margin-top: 2.85rem;
-  font-size: 1.7rem;
-  font-weight: 500;
-  line-height: calc(25 / 17);
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 22.3rem;
-}
+// .p-hyphen {
+//   display: inline-block;
+//   width: 3rem;
+//   height: 0.1rem;
+//   background-color: rgba(112, 112, 112, 1);
+// }
 
+
+// .p-plan-note {
+//   margin-top: 2.85rem;
+//   font-size: 1.7rem;
+//   font-weight: 500;
+//   line-height: calc(25 / 17);
+//   justify-content: center;
+//   align-items: center;
+//   padding-bottom: 22.3rem;
+// }

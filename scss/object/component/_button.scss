@@ -20,6 +20,9 @@
     height: 6rem;
     font-size: 2rem;
     letter-spacing: 0.2em;
+    @include sp {
+      width: 33.5rem;
+    }
   }
 
   &:hover {
@@ -29,8 +32,6 @@
 
   }
 }
-
-
 
 .c-top-btn {
   width: 6.8rem;
@@ -47,7 +48,7 @@
 
 @include sp {
   align-self: flex-end;
-  margin-right: 2rem; // 必要なら余白調整
+  // margin-right: 2rem; // 必要なら余白調整
 }
 
   &__arrow {
