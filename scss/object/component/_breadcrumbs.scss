@@ -9,6 +9,7 @@
 
 .c-breadcrumbs ol {
   display: flex;
+  flex-wrap: wrap; 
   height: 100%;
   align-items: center;
   color: rgba(0, 0, 0, 1);
@@ -17,11 +18,33 @@
 .c-breadcrumbs__list {
   display: flex;
   align-items: center;
+  line-height: 0.5;
 }
+  .c-breadcrumbs__list span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: calc(33 / 16);
+  }
+
+
 
 .c-breadcrumbs__list li+li::before {
   content: ">";
   margin: 0 8px;
   color: rgba(0, 0, 0, 1);
 }
+
+
+// .c-breadcrumbs__list {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+// .page-single-blog {
+//   @include sp {
+//     .c-breadcrumbs__list li:last-child {
+//       width: 100%;
+//     }
+  
+// }
+
 
