@@ -23,5 +23,6 @@
     }
   ],
   "liveServer.settings.port": 5501,
-  "git.enableSmartCommit": false
+  "git.enableSmartCommit": false,
+  "livePreview.defaultPreviewPath": "/blog-detail.html"
 }
