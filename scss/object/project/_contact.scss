@@ -1,0 +1,57 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.p-contact-form__input input[type="text"],
+.p-contact-form__input input[type="email"],
+.p-contact-form__input input[type="tel"],
+.p-contact-form__textarea textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+}
+.p-contact-form__textarea textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  appearance: auto;
+}
+
+.p-contact-form {
+  margin-top: 6.8rem;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: calc(33 / 20)
+
+}
+
+
+.p-contact-form__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.p-contact-form__items {
+  margin-top: 6.5rem;
+}
+
+.form-checkbox {
+  display: flex;
+  flex-direction: column;
+}
+.form-checkbox label {
+  display: flex;
+}
+
+
+.flex-dl dt {
+  width: 16.9rem;
+}
+
+
+
+
