@@ -9,11 +9,13 @@
   padding: 1rem;
   border: 1px solid #ccc;
   background: #fff;
-  border-radius: 4px;
+  height: 4rem;
+  width: 71rem;
 }
 .p-contact-form__textarea textarea {
-  height: 150px;
+  // height: 150px;
   resize: vertical;
+  height: 30rem;
 }
 
 input[type="checkbox"] {
@@ -25,10 +27,9 @@ input[type="checkbox"] {
   font-size: 2rem;
   font-weight: 500;
   line-height: calc(33 / 20)
+  
 
 }
-
-
 .p-contact-form__text {
   display: flex;
   flex-direction: column;
@@ -36,8 +37,22 @@ input[type="checkbox"] {
 }
 
 .p-contact-form__items {
+  display: flex;
+  flex-direction: column;
   margin-top: 6.5rem;
+  row-gap: 3rem;
 }
+.p-contact-form__item {
+  display: flex;
+  column-gap: 2.9rem;
+}
+.p-contact-form__label {
+  width: 14rem;
+}
+.p-contact-form__input {
+  display: flex;
+}
+
 
 .form-checkbox {
   display: flex;
@@ -47,10 +62,20 @@ input[type="checkbox"] {
   display: flex;
 }
 
-
-.flex-dl dt {
-  width: 16.9rem;
+.p-contact-form__submit {
+  width: 25rem;
+  height: 5rem;
+  background: #CB0000;
+  color: #FFFFFF;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
+
+
+
+
 
 
 

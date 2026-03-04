@@ -37,11 +37,20 @@
 
 .p-blog-detail {
   &__image {
+    width: 60rem;
+    aspect-ratio: 12 / 7;
+    overflow: hidden;
+
+    @include sp {
+      width: 33.5rem;
+      aspect-ratio: 335 / 200;
+    }
 
     img {
       width: 100%;
-      height: auto;
-      display: block; // ← これ超重要
+      height: 100%;
+      display: block;
+      object-fit: cover;
 
     }
 
@@ -131,8 +140,22 @@
   }
 
   &__image-small {
-    width: 33.5rem;
+    width: 35rem;
+    aspect-ratio: 350 / 247;
+    overflow: hidden;
     margin-top: 1.7rem;
+
+    @include sp {
+      width: 33.5rem;
+      aspect-ratio: 67 / 40;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 
   &__lists {
@@ -260,10 +283,14 @@
   &__photo {
     width: 9.8rem;
     flex-shrink: 0;
+    aspect-ratio: 98 / 68;
+    overflow: hidden;
   }
 
   &__photo img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
   }
 
@@ -344,11 +371,20 @@
 .p-blog-detail__connect__item {
   display: flex;
   column-gap: 3rem;
+
+  @include sp {
+    column-gap: 2rem;
+
+  }
 }
 
 .p-blog-detail__connect__photo {
   width: 20rem; // 好きなサイズ
   flex-shrink: 0; // ← 縮まないようにする（重要）
+
+  @include sp {
+    width: 16rem;
+  }
 }
 
 .p-top-blog-ad {
@@ -367,7 +403,9 @@
     }
   }
 }
-
+.p-blog-detail-date {
+  text-align: left;
+}
 
 // --------------サイドバー--------------
 
@@ -430,6 +468,7 @@
       padding: 2rem;
 
     }
+
     p {
       position: absolute;
       top: 50%;
@@ -476,21 +515,23 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
- @include sp {
-  width: 29.5rem;
-  height: 5.4rem;
- }
+
+  @include sp {
+    width: 29.5rem;
+    height: 5.4rem;
+  }
 }
 
 
 .black-backgroud {
   position: absolute;
-  top: 37%;
+  top: 50%;
   right: 0; // ← 右に配置
   transform: translateY(-50%);
   width: 4rem;
   height: 4rem;
   z-index: 2;
+
   @include sp {
     width: 5.4rem;
   }
@@ -546,14 +587,33 @@
 
 .p-blog-detail-article__item {
   display: flex;
+
   @include sp {
     column-gap: 2rem;
   }
 }
+
 .article-recommend-photo {
   display: block;
-  width: 16rem;
+  aspect-ratio: 19 / 15;
+  width: 9.5rem; // 横幅は親に合わせる
+  overflow: hidden; // はみ出し防止
+
+  @include sp {
+    width: 16rem;
+    aspect-ratio: 16 / 11;
+
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // 比率を保ったままトリミング
+    display: block; // 下の隙間防止
+  }
+
 }
+
 
 
 
