@@ -1840,7 +1840,7 @@ img {
   height: 100%;
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.502);
+  background: rgba(0, 0, 0, 0.4863);
   z-index: 1;
 }
 .p-plan-fv__image {
@@ -3234,6 +3234,67 @@ textarea::placeholder {
 }
 @media (max-width: 767px) {
   .p-contact-send__button {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+}
+
+.p-404 {
+  padding-top: 6.7rem;
+  padding-bottom: 9rem;
+}
+@media (max-width: 767px) {
+  .p-404 {
+    padding-top: 4.7rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.p-404__text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6666666667;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .p-404__text {
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.875;
+  }
+}
+
+.p-404__submit {
+  width: 25rem;
+  height: 5rem;
+  background: #CB0000;
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+@media (max-width: 767px) {
+  .p-404__submit {
+    width: 33.5rem;
+  }
+}
+
+.p-404__button {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.32;
+}
+@media (max-width: 767px) {
+  .p-404__button {
     font-size: 2rem;
     line-height: 1.3;
   }
