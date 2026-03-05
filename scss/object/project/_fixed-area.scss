@@ -2,36 +2,44 @@
 @use '../../foundation/mixin' as *;
 
 .p-fixed-area {
+  width: 30rem;
   position: fixed;
   right: 0;
   bottom: 0;
   z-index: 100;
   display: flex;
   flex-direction: column;
-  row-gap: 3rem;
+  // row-gap: 3rem;
   align-items: center;
-
-  @include sp {
-    right: 50%;
-    transform: translateX(50%);
-    align-items: center;
-    row-gap: 1.9rem;
-  }
-
-  
-  &.is-absolute {
-    position: absolute;
-  }
-}
-
-.p-fixed-area {
   opacity: 1;
   transition: opacity 0.3s ease;
 
+  @include sp {
+    width: 33.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    align-items: center;
+    // row-gap: 1.9rem;
+  }
+  
+  &.is-absolute {
+    position: absolute;
+  }  
+  
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
   }
+.c-top-btn {
+  margin-bottom: 3rem;
+
+  @include sp {
+    margin-bottom: 1.9rem;
+  }
 }
+
+}  
+
+
 
 

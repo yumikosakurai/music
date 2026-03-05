@@ -5,61 +5,107 @@
 .p-contact-form__input input[type="email"],
 .p-contact-form__input input[type="tel"],
 .p-contact-form__textarea textarea {
-  width: 100%;
   padding: 1rem;
   border: 1px solid #ccc;
   background: #fff;
   height: 4rem;
   width: 71rem;
+  color: #B2B2B2;
+
+  @include sp {
+    padding: 1.2rem 2rem;
+    width: 33.5rem;
+  }
 }
+
 .p-contact-form__textarea textarea {
   // height: 150px;
   resize: vertical;
   height: 30rem;
+
+  @include sp {
+    width: 33.5rem;
+    height: 19rem;
+  }
 }
 
 input[type="checkbox"] {
   appearance: auto;
+  border-radius: 0;
 }
 
 .p-contact-form {
   margin-top: 6.8rem;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: calc(33 / 20)
-  
 
-}
-.p-contact-form__text {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
+  &__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
 
-.p-contact-form__items {
-  display: flex;
-  flex-direction: column;
-  margin-top: 6.5rem;
-  row-gap: 3rem;
-}
-.p-contact-form__item {
-  display: flex;
-  column-gap: 2.9rem;
-}
-.p-contact-form__label {
-  width: 14rem;
-}
-.p-contact-form__input {
-  display: flex;
-}
+    line-height: calc(30 / 18);
 
+    @include sp {
+      font-size: 1.6rem;
+      text-align: left;
+    }
+  }
+
+
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6.5rem;
+    row-gap: 3rem;
+
+    @include sp {
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    column-gap: 2.9rem;
+
+    @include sp {
+      display: block;
+    }
+  }
+
+  &__label {
+    width: 14rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: calc(33 / 20);
+
+    @include sp {
+      font-size: 1.6rem;
+      line-height: calc(33 / 16);
+      margin-top: 1.4rem;
+
+    }
+  }
+
+  &__input {
+    display: flex;
+
+    @include sp {
+      display: block;
+      margin-top: 0.2rem;
+    }
+  }
+}
 
 .form-checkbox {
   display: flex;
   flex-direction: column;
 }
+
 .form-checkbox label {
   display: flex;
+  column-gap: 2rem;
 }
 
 .p-contact-form__submit {
@@ -71,10 +117,39 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: center;
   display: flex;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+
+  @include sp {
+    width: 33.5rem;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #B2B2B2;
+  opacity: 1;
 }
 
 
+// .p-top-blog-btn {
+//   position: fixed;
+//   right: 10rem;
+//   bottom: 3rem;
+//   z-index: 100;
+// }
 
+
+// .page-no-contact .p-fixed-area {
+//   bottom: 3rem;
+//   right: 10rem;
+// }
+
+// .page-no-contact .p-fixed-area.is-absolute {
+//   position: absolute;
+//   bottom: calc(100% + 3rem);
+// }
 
 
 
