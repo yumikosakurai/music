@@ -1,0 +1,19 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+.p-search-title {
+  display: flex;
+  column-gap: 62.6rem;
+  padding-top: 6.6rem;
+
+  @include sp {
+    padding-top: 3.6rem;
+    column-gap: 8.1rem;
+
+  }
+}
+.p-search-items {
+  margin-top: 4.2rem;
+}
+
+
