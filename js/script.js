@@ -105,3 +105,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// document.addEventListener("DOMContentLoaded", function () {
+// 	const fixedArea = document.querySelector(".p-fixed-area");
+// 	const footer = document.querySelector("footer");
+
+// 	if (!fixedArea || !footer) return;
+
+// 	window.addEventListener("scroll", () => {
+// 		const footerTop = footer.getBoundingClientRect().top;
+// 		const windowHeight = window.innerHeight;
+// 		const fixedHeight = fixedArea.offsetHeight;
+// 		const scrollY = window.scrollY || window.pageYOffset;
+
+// 		if (footerTop <= windowHeight - fixedHeight) {
+// 			fixedArea.classList.add("is-absolute");
+// 		} else {
+// 			fixedArea.classList.remove("is-absolute");
+// 		}
+
+// 		if(scrollY > 100) {
+// 			fixedArea.classList.remove("is-hidden");
+// 		} else {
+// 			fixedArea.classList.add("is-hidden");
+// 		}
+// 	});
+// });
