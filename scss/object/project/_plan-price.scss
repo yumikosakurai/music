@@ -2,7 +2,7 @@
 @use '../../foundation/mixin' as *;
 
 .p-plan-fv {
-  position: relative;
+    position: relative;
 
   &::before {
     content: "";
@@ -14,13 +14,7 @@
     background: rgba(0, 0, 0, 0.4863);
     z-index: 1;
   }
-
-  &__image {
-    width: 100%;
-    display: block; // ← これ重要
-  }
 }
-
 
 .p-plan-fv-catch {
   position: absolute;

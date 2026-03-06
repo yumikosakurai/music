@@ -1,0 +1,48 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+
+.p-result-fv.p-plan-fv::before {
+  content: none;
+}
+
+
+.p-result-content {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-result-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-result__image {
+  width: 38.7rem;
+  aspect-ratio: 387 / 273;
+  overflow: hidden;
+  margin-top: 4rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+  }
+}
+.p-result-date {
+  text-align: right;
+}
+
+
+
+
+
+
+
+
+
