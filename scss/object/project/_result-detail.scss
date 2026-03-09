@@ -1,7 +1,125 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-.p-result-datail {
+.p-result-detail__content {
   padding-top: 7rem;
+  padding-bottom: 19.7rem;
 }
 
+.p-result-detail-photo {
+  width: 88rem;
+  aspect-ratio: 880 / 400;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+  }
+
+  @include sp {
+    width: 33.5rem;
+    aspect-ratio: 335 / 236;
+
+  }
+}
+
+.p-result__text {
+  font-size: 2.5rem;
+  line-height: calc(40 / 25);
+  font-weight: 700;
+  margin-top: 5rem;
+}
+
+.p-result-detail-profile {
+  margin-top: 5.7rem;
+  display: flex;
+  column-gap: 4rem;
+  @include sp {
+   display: flex;
+   flex-direction: column; 
+   margin-top: 2.1rem;
+  }
+}
+
+.p-result-detail-table {
+  width: 40rem;
+  border-collapse: collapse;
+  border: 0.05rem solid #707070; // テーブル外枠
+  flex-shrink: 0;
+
+  @include sp {
+    width: 33.5rem;
+    height: 18.95rem;
+    overflow-x: scroll;
+    // padding-bottom: 2rem;
+    margin-top: 2.1rem;
+
+  }
+}
+
+.p-result-detail-thoughts {
+  flex: 1;
+  margin-top: 2.8rem;
+}
+
+.p-result-detail-table th,
+.p-result-detail-table td {
+  border: 0.05rem solid #707070; // セルの線
+  padding: 1rem;
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
+
+  @include sp {
+    padding: 0.75rem 1rem 0 1rem;
+  }
+}
+.p-result-detail-table th {
+  font-weight: 700;
+  // @include sp {
+  //   width: 12rem;
+  // }
+}
+
+.p-result-detail-table td {
+  font-weight: 500;
+  //   @include sp {
+  //   width: 21.5rem;
+  // }
+
+}
+
+.p-result-detail-pepar {
+  column-gap: 20rem;
+    @include sp {
+  column-gap: 2.2rem;
+  }
+
+}
+
+.p-result-detail-tag {
+  width: 34rem;
+  @include sp {
+  width: 15.6rem;
+  }
+}
+
+.p-result-detail-connect {
+  width: 87.9rem;
+}
+
+// .p-blog-detail__connect__photo {
+//   width: 26rem;
+//   aspect-ratio: 260 / 183;
+//   overflow: hidden;
+//   img {
+//     width: 100%;
+//     height: 100%;
+//     display: block;
+//     object-fit: cover;
+
+//   }
+
+// }
