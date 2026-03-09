@@ -360,7 +360,6 @@
   }
 }
 
-
 .p-blog-detail-connect__items {
   display: flex;
   flex-direction: column;
@@ -379,12 +378,13 @@
 }
 
 .p-blog-detail__connect__photo {
-  width: 20rem; // 好きなサイズ
-  flex-shrink: 0; // ← 縮まないようにする（重要）
-
+  width: 20rem; 
+  flex-shrink: 0; 
+ 
   @include sp {
     width: 16rem;
   }
+ 
 }
 
 .p-top-blog-ad {
@@ -403,6 +403,7 @@
     }
   }
 }
+
 .p-blog-detail-date {
   text-align: left;
 }
@@ -522,6 +523,17 @@
   }
 }
 
+.search-input {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  &::placeholder {
+  font-weight: 400;
+}
+}
 
 .black-backgroud {
   position: absolute;

@@ -9,47 +9,48 @@
     padding-top: 4.7rem;
     padding-bottom: 5rem;
   }
-}
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: calc(30 / 18);
+    text-align: center;
+  
+    @include sp {
+      text-align: left;
+      font-size: 1.6rem;
+      line-height: calc(30 / 16);
+    }
+  }
 
-.p-contact-send__text {
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: calc(30 / 18);
-  text-align: center;
-
-  @include sp {
-    text-align: left;
-    font-size: 1.6rem;
-    line-height: calc(30 / 16);
+  &__submit {
+    width: 25rem;
+    height: 5rem;
+    background: #CB0000;
+    color: #FFFFFF;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 4rem;
+  
+    @include sp {
+      width: 33.5rem;
+    }
+  }
+  &__button {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: calc(33 / 25);
+  
+    @include sp {
+      font-size: 2rem;
+      line-height: calc(26 / 20);
+  
+    }
+  
   }
 }
 
-.p-contact-send__submit {
-  width: 25rem;
-  height: 5rem;
-  background: #CB0000;
-  color: #FFFFFF;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin: 0 auto;
-  margin-top: 4rem;
 
-  @include sp {
-    width: 33.5rem;
-  }
-}
 
-.p-contact-send__button {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: calc(33 / 25);
-
-  @include sp {
-    font-size: 2rem;
-    line-height: calc(26 / 20);
-
-  }
-
-}
