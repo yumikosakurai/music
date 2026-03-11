@@ -68,17 +68,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 jQuery(function ($) {
 	$(".p-top-question-item").on("click", function () {
-		const answer = $(this).find(".p-top-question-item__answer");
+		const answer = $(this).find("dd");
 
 		// 他を閉じる
-		$(".p-top-question-item__answer").not(answer).slideUp(300);
-		$(".p-top-question-item").not(this).removeClass("is-open");
+		// $(".p-top-question-item__answer").not(answer).slideUp(300);
+		// $(".p-top-question-item").not(this).removeClass("is-open");
 
 		// 今のを開閉
 		answer.slideToggle(300);
 		$(this).toggleClass("is-open");
 	});
 });
+
 // footerの前で固定
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -89,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	window.addEventListener("scroll", () => {
 		const footerTop = footer.getBoundingClientRect().top;
+		console.log(footerTop)
 		const windowHeight = window.innerHeight;
 		const scrollY = window.scrollY || window.pageYOffset;
 		if (footerTop <= windowHeight) {
@@ -105,28 +107,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 // document.addEventListener("DOMContentLoaded", function () {
-// 	const fixedArea = document.querySelector(".p-fixed-area");
-// 	const footer = document.querySelector("footer");
+//   const fixedArea = document.querySelector(".p-fixed-area");
+//   const footer = document.querySelector("footer");
 
-// 	if (!fixedArea || !footer) return;
+//   if (!fixedArea || !footer) return;
 
-// 	window.addEventListener("scroll", () => {
-// 		const footerTop = footer.getBoundingClientRect().top;
-// 		const windowHeight = window.innerHeight;
-// 		const fixedHeight = fixedArea.offsetHeight;
-// 		const scrollY = window.scrollY || window.pageYOffset;
+//   window.addEventListener("scroll", () => {
 
-// 		if (footerTop <= windowHeight - fixedHeight) {
-// 			fixedArea.classList.add("is-absolute");
-// 		} else {
-// 			fixedArea.classList.remove("is-absolute");
-// 		}
+//     const footerTop = footer.getBoundingClientRect().top;
+//     const windowHeight = window.innerHeight;
+//     const fixedHeight = fixedArea.offsetHeight;
+//     const scrollY = window.scrollY;
 
-// 		if(scrollY > 100) {
-// 			fixedArea.classList.remove("is-hidden");
-// 		} else {
-// 			fixedArea.classList.add("is-hidden");
-// 		}
-// 	});
+//     // footerにぶつかる前で止める
+//     if (footerTop <= windowHeight - fixedHeight) {
+//       fixedArea.classList.add("is-absolute");
+//     } else {
+//       fixedArea.classList.remove("is-absolute");
+//     }
+
+//     // 100pxスクロールで表示
+//     if (scrollY > 100) {
+//       fixedArea.classList.remove("is-hidden");
+//     } else {
+//       fixedArea.classList.add("is-hidden");
+//     }
+
+//   });
 // });

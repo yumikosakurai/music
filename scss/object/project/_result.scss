@@ -1,11 +1,14 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
+.p-result {
+  padding-top: 6.7rem;
+  padding-bottom: 21rem;
+}
 
 .p-result-fv.p-plan-fv::before {
   content: none;
 }
-
 
 .p-result-content {
   display: flex;
@@ -19,6 +22,7 @@
   display: flex;
   flex-direction: column;
 }
+
 
 .p-result__image {
   width: 38.7rem;
