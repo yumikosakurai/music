@@ -5,13 +5,21 @@
   height: 5rem;
   background: rgba(232, 232, 232, 1);
   overflow-x: auto;
+
+  @include sp {
+    height: 3.6rem;
+  }
 }
+
 
 .c-breadcrumbs__inner {
   height: 5rem;
   display: flex;
-  align-items: center;   // ← 縦中央
-  justify-content: center; // ← 横中央
+  padding-bottom: 1.7rem;
+  @include sp {
+    padding-bottom: 1rem; // align-items: center; 
+  }
+  // justify-content: center; 
 }
 
 // .c-breadcrumbs ol {

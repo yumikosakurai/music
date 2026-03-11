@@ -2,7 +2,7 @@
 @use '../../foundation/mixin' as *;
 
 .p-plan-fv {
-    position: relative;
+  position: relative;
 
   &::before {
     content: "";
@@ -14,18 +14,18 @@
     background: rgba(0, 0, 0, 0.4863);
     z-index: 1;
   }
-  
+
   &-catch {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
+
     z-index: 2;
     color: #fff;
     text-align: center;
-  
-  
+
+
     font-size: 2.5rem;
     font-weight: 700;
     line-height: calc(60 / 25);
@@ -34,20 +34,29 @@
 
 
 .p-plan {
+  padding-top: 6.7rem;
+  padding-bottom: 22.3rem;
+
+  @include sp {
+    padding-top: 5rem;
+    padding-bottom: 20rem;
+  }
+
+
   &__title {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 100%;
     text-align: center;
-    margin-top: 6.7rem;
+    // margin-top: 6.7rem;
   }
 
   &__items {
     display: flex;
-    column-gap: 7.9rem;
+    column-gap: 3rem;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 5rem;
 
     @include sp {
       flex-direction: column; // 縦並び
@@ -106,6 +115,12 @@
     line-height: calc(30 / 18);
     justify-content: center;
     align-items: center;
+    letter-spacing: -0.01em;
+
+    @include sp {
+      font-size: 1.6rem;
+      line-height: calc(30 / 16);
+    }
   }
 }
 
@@ -117,19 +132,19 @@
     font-weight: 700;
     line-height: 100%;
     text-align: center;
-    margin-top: 5.7rem;
+    margin-top: 7rem;
 
     @include sp {
-      margin-top: 3.8rem;
+      margin-top: 4.5rem;
     }
   }
-
+  
   &__table {
     margin-top: 5rem;
 
     @include sp {
       overflow-x: scroll;
-      padding-bottom: 2rem;
+      padding-bottom: 1.5rem;
       margin-top: 2.2rem;
 
       &::-webkit-scrollbar {
@@ -262,6 +277,7 @@
         font-size: 1.7rem;
         font-weight: 500;
         line-height: calc(25 / 17);
+
         @include sp {
           font-size: 1.6rem;
           line-height: calc(25 / 16);
@@ -270,6 +286,7 @@
 
       th {
         padding-inline: 2rem;
+
         @include sp {
           padding-inline: 1rem;
         }
@@ -281,7 +298,7 @@
         }
 
       }
-      
+
       td {
         border-left: 0.05rem solid rgba(0, 0, 0, 1);
         text-align: center;
@@ -309,17 +326,12 @@
     line-height: calc(25 / 17);
     justify-content: center;
     align-items: center;
-    padding-bottom: 22.3rem;
-
+    letter-spacing: 0;
+    @include sp {
+      margin-top: 2rem;
+    }
   }
-
-
-
 }
-
-
-
-
 
 
 // .p-plan-table__title {

@@ -5,6 +5,12 @@
   background: #CB0000;
   padding-top: 6.8rem;
   padding-bottom: 6rem;
+
+  @include sp {
+    padding-top: 4.9rem;
+    padding-bottom: 4rem;
+
+  }
 }
 
 .p-top-message {
@@ -35,9 +41,11 @@
     font-weight: 500;
     line-height: calc(30 / 18);
     margin-top: 3rem;
-        @include sp {
+
+    @include sp {
       font-size: 1.8rem;
       line-height: calc(30 / 18);
+      margin-top: 1.4rem;
+    }
   }
-}
 }

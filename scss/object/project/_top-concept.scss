@@ -1,10 +1,15 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-
-.p-concept {
+.p-top-concept {
   padding-top: 6.6rem;
   padding-bottom: 5.5rem;
+
+  @include sp {
+    padding-top: 4.6rem;
+    padding-bottom: 3.5rem;
+
+  }
 }
 
 .p-concept__plan {
@@ -20,7 +25,6 @@
   @include sp {
     font-size: 2.5rem;
     line-height: calc(40 / 25);
-    margin-top: 4.6rem;
   }
 }
 
@@ -31,6 +35,9 @@
   justify-content: center;
   align-items: center;
   margin-top: 1.7rem;
+  @include sp {
+    margin-top: 0.7rem;
+  }
 }
 
 
@@ -43,6 +50,7 @@
 
   @include sp {
     width: 33.5rem;
+    margin-top: 2rem;
   }
 }
 
@@ -52,6 +60,11 @@
   display: flex;
   flex-direction: column;
   row-gap: 1.8rem;
+  margin-top: 2rem;
+  @include sp {
+    margin-top: 3.3rem;
+  }
+
 }
 
 // .p-concept__items::before {
@@ -90,8 +103,8 @@
     font-size: 2rem;
     line-height: calc(50 / 20);
   }
-
 }
+
 
 .p-concept-item__sec {
   width: 46.2%;
@@ -100,7 +113,7 @@
   font-weight: 500;
   line-height: calc(50 / 23);
 
-    @include sp {
+  @include sp {
     font-size: 2rem;
     line-height: calc(50 / 20);
   }
@@ -126,7 +139,7 @@
     // top: -3.888rem;
     bottom: 1rem;
     width: 0.3rem;
-    height: 18rem;
+    height: 18.5rem;
     background: #CB0000;
 
     &::before,
@@ -136,7 +149,7 @@
       position: absolute;
       top: -0.2rem;
       // left: 0;
-      width: 2rem;
+      width: 2.3rem;
       height: 0.3rem;
       background: #CB0000;
       // background: #000;

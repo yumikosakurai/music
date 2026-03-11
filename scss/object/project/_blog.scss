@@ -1,22 +1,28 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-
 .p-blog-list__items {
   display: flex;
   flex-direction: column;
-  margin-top: 6.7rem;
+  margin-top: 4.7rem;
   gap: 7rem;
 
   @include sp {
-    margin-top: 3.9rem;
-    row-gap: 3.9rem;
-
+    margin-top: 4.2rem;
+    row-gap: 3.5rem;
   }
 }
 
-
 .p-blog-list {
+  padding-top: 7rem;
+  padding-bottom: 21rem;
+
+  @include sp {
+    padding-top: 5.5rem;
+    padding-bottom: 20.5rem;
+
+  }
+
   &__body {
     margin-left: 5rem;
     align-items: center;
@@ -25,12 +31,11 @@
 
     @include sp {
       margin-left: 0;
+      padding-top: 3rem;
     }
   }
-  &__items {
-    column-gap: 5rem;
-  }
-  
+
+
   &__item {
     display: flex;
     // row-gap: 7rem;
@@ -44,20 +49,29 @@
   }
 
   &__image {
-    flex: 0 0 29.5%;
+    // flex: 0 0 29.5%;
+    width: 26rem;
     aspect-ratio: 260 / 184;
     overflow: hidden;
+
+    @include sp {
+      width: 33.5rem;
+      aspect-ratio: 335 / 200;
+      margin-top: 0;
+    }
 
     img {
       width: 100%;
       height: auto;
-      display: block; 
+      display: block;
 
       picture {
         display: block;
       }
     }
   }
+
+
 
   &__title {
     font-size: 2rem;
@@ -80,23 +94,23 @@
       margin-left: 0;
       display: block;
       text-align: right;
+      margin-top: 1.5rem;
     }
   }
 
-  &__date {
-    font-size: 1.7rem;
+  &__text {
+    margin-top: 1.1rem;
+    font-size: 1.8rem;
     font-weight: 500;
-    line-height: calc(30 / 17);
-    margin-top: 0.3rem;
+    line-height: calc(30 / 16);
+
 
     @include sp {
-      margin-left: 0;
-      display: block;
-      text-align: right;
+      font-size: 1.6rem;
+      line-height: calc(30 / 16);
+
     }
   }
-
-
 }
 
 
@@ -116,6 +130,10 @@
   font-weight: 700;
   line-height: calc(25 / 15);
   text-align: center;
+
+  @include sp {
+    width: 9rem;
+  }
 }
 
 .p-pagination__list {
@@ -125,6 +143,10 @@
   padding: 0;
   justify-content: center;
   align-items: center;
+
+  @include sp {
+    gap: 0.5rem;
+  }
 
   a {
     display: flex;
@@ -136,6 +158,11 @@
     text-decoration: none;
     color: #333;
 
+    @include sp {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+
 
     &:hover {
       background: #333;
@@ -144,13 +171,14 @@
 
   }
 }
+
 .p-pagination {
-  margin-top: 7rem;
-  margin-bottom: 21rem;
+  margin-top: 7.5rem;
+  // margin-bottom: 21rem;
 
   @include sp {
     margin-top: 5.9rem;
-    margin-bottom: 14.3rem;
+    // margin-bottom: 14.3rem;
   }
 }
 
@@ -160,12 +188,3 @@
   background: #333;
   color: #fff;
 }
-
-
-
-
-
-
-
-
-

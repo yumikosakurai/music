@@ -3,8 +3,12 @@
 
 .p-top-flow__room {
   padding-top: 3.4rem;
-  // padding-bottom: 10.772rem;
 
+  // padding-bottom: 10.772rem;
+  @include sp {
+    padding-top: 4.6rem;
+
+  }
 }
 
 .p-top-flow__title {
@@ -12,6 +16,13 @@
   font-size: 3rem;
   font-weight: 700;
   line-height: calc(50 / 30);
+
+  @include sp {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+
+  }
+
 }
 
 // .p-flow-blocks {
@@ -22,14 +33,14 @@
   // display: flex;
   display: grid;
   grid-template-columns: auto 15.4rem 1fr;
-  column-gap: 3.8rem;
+  column-gap: 4.5rem;
   margin-top: 5.3rem;
+  margin-left: 5rem;
 
   @include sp {
     display: inline-block;
-    //  display: grid;
-    // grid-template-columns: 2rem 1fr;
-    // column-gap: 1.5rem;
+    margin-top: 3.6rem;
+    margin-left: 0.8rem;
   }
 }
 
@@ -45,10 +56,9 @@
   white-space: nowrap;
 
   @include sp {
-    margin-left: 6.8rem;
+    margin-left: 4rem;
   }
 }
-
 
 .p-top-flow-block__plan {
   font-size: 1.8rem;
@@ -56,7 +66,11 @@
   line-height: calc(30 / 18);
 
   @include sp {
-    margin-left: 6.8rem;
+    margin-left: 4rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+
   }
 }
 
@@ -72,17 +86,17 @@
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  margin-bottom: 1.7rem;
+  // margin-bottom: 1.7rem;
+  margin-top: 1rem;
 }
+
 .p-top-flow-block__circle {
   @include sp {
     margin: 0;
     margin-top: 1rem;
     position: absolute;
   }
-
 }
-
 
 .p-top-flow-block__circle {
 
@@ -111,7 +125,7 @@
       position: absolute;
       bottom: -0.2rem;
       // left: 0;
-      width: 2rem;
+      width: 2.5rem;
       height: 0.3rem;
       background: #CB0000;
       // background: #000;
