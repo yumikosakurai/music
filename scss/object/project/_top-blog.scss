@@ -1,8 +1,8 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-.p-top-blog-room {
-  padding-top: 7.045rem;
+.p-top-blog {
+  padding-top: 6.8rem;
   padding-bottom: 20.5rem;
 
   @include sp {
@@ -79,6 +79,7 @@
   font-weight: 500;
   line-height: calc(30 / 17);
   text-align: right;
+  margin-top: 0.8rem;
 
   @include sp {
     margin-top: 0.8rem;
@@ -94,7 +95,7 @@
 
 .p-top-blog-word {
   // display: inline-block;
-  margin-top: 3.7rem;
+  margin-top: 4rem;
   border-bottom: 0.01rem solid rgba(0, 0, 0, 1);
   color: rgba(0, 0, 0, 1);
   padding-bottom: 0;

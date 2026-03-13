@@ -2,7 +2,7 @@
 @use '../../foundation/mixin' as *;
 
 .p-top-question {
-  padding-top: 12rem;
+  padding-top: 11.5rem;
 
   @include sp {
     padding-top: 5.5rem;
@@ -67,12 +67,13 @@
   dt {
     position: relative;
 
-    @include sp {}
+    // @include sp {}
 
     &::after {
       content: "";
       width: 1.1rem;
       height: 1.1rem;
+      // margin-top: 1rem;
       position: absolute;
       top: 50%;
       right: 3rem;
@@ -83,7 +84,6 @@
       @include sp {
         right: 1.4rem;
       }
-
     }
   }
   

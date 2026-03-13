@@ -3,7 +3,13 @@
 
 .p-result-detail__content {
   padding-top: 7rem;
-  padding-bottom: 19.7rem;
+  padding-bottom: 15.7rem;
+
+  @include sp {
+    padding-top: 5rem;
+    padding-bottom: 19.7rem;
+
+  }
 }
 
 .p-result-detail-photo {
@@ -26,26 +32,67 @@
   }
 }
 
-.p-result__text {
+.p-result-detail-date {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 1.7rem;
+  line-height: calc(30 / 17);
+
+  @include sp {
+    margin-top: 0.6rem;
+    text-align: left;
+  }
+}
+
+.p-result-detail-pop {
+  width: 10rem;
+}
+
+// width: 16rem;
+// aspect-ratio: 160 / 113;
+// overflow: hidden;
+//  img {
+//     object-fit: cover;
+//   }
+
+// .p-result-detail-body {
+//     @include sp {
+//       margin-left: 2rem;
+//     }
+// }
+
+
+
+.p-result-detail-first-text {
   font-size: 2.5rem;
   line-height: calc(40 / 25);
   font-weight: 700;
   margin-top: 5rem;
+
+  @include sp {
+    font-size: 2rem;
+    line-height: calc(30 / 20);
+    font-weight: 700;
+    margin-top: 3rem;
+
+  }
 }
 
 .p-result-detail-profile {
-  margin-top: 5.7rem;
+  margin-top: 5.5rem;
   display: flex;
   column-gap: 4rem;
+
   @include sp {
-   display: flex;
-   flex-direction: column; 
-   margin-top: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
   }
 }
 
 .p-result-detail-table {
   width: 40rem;
+  height: 19rem;
   border-collapse: collapse;
   border: 0.05rem solid #707070; // テーブル外枠
   flex-shrink: 0;
@@ -62,13 +109,21 @@
 
 .p-result-detail-thoughts {
   flex: 1;
-  margin-top: 2.8rem;
+  // margin-top: 2.8rem;
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
+
+  @include sp {
+    margin-top: 2.8rem;
+  }
 }
 
 .p-result-detail-table th,
 .p-result-detail-table td {
   border: 0.05rem solid #707070; // セルの線
-  padding: 1rem;
+  padding-top: 0.8rem;
+  padding-left: 2rem;
+  // padding: 0.8rem 2rem 0;
   font-size: 1.8rem;
   line-height: calc(30 / 18);
 
@@ -76,12 +131,17 @@
     padding: 0.75rem 1rem 0 1rem;
   }
 }
+
 .p-result-detail-table th {
   font-weight: 700;
-  // @include sp {
-  //   width: 12rem;
-  // }
+  width: 14rem;
+  background: #E5E5E5;
+
+  @include sp {
+    width: 12rem;
+  }
 }
+
 
 .p-result-detail-table td {
   font-weight: 500;
@@ -93,33 +153,115 @@
 
 .p-result-detail-pepar {
   column-gap: 20rem;
-    @include sp {
-  column-gap: 2.2rem;
-  }
+  margin-top: 6rem;
 
+  @include sp {
+    column-gap: 2.2rem;
+    margin-top: 4.4rem;
+  }
 }
 
 .p-result-detail-tag {
   width: 34rem;
+
   @include sp {
-  width: 15.6rem;
+    width: 15.6rem;
   }
+}
+
+.p-result-detail-card {
+  margin-top: 1.2rem;
 }
 
 .p-result-detail-connect {
   width: 87.9rem;
+  margin-top: 9.5rem;
+
+  @include sp {
+    width: 33.5rem;
+    margin-top: 6.5rem;
+    text-align: center;
+    padding-left: 0;
+  }
 }
 
-// .p-blog-detail__connect__photo {
-//   width: 26rem;
-//   aspect-ratio: 260 / 183;
-//   overflow: hidden;
-//   img {
-//     width: 100%;
-//     height: 100%;
-//     display: block;
-//     object-fit: cover;
+.p-result-detail-items {
+  margin-top: 3rem;
+  row-gap: 3rem;
 
-//   }
+  @include sp {
+    margin-top: 2rem;
+    row-gap: 2rem;
+  }
+}
 
-// }
+.p-result-detail-item {
+  @include sp {
+    display: grid;
+    grid-template-columns: 48% 46%;
+    gap: 2rem;
+  }
+}
+
+.p-result-detail-image {
+  width: 26rem;
+  aspect-ratio: 260 / 183;
+  overflow: hidden;
+  @include sp {
+    margin-top: 0;
+    width: 16rem;
+    aspect-ratio: 160 / 113;
+  }
+    
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.p-result-detail-text {
+  font-size: 2rem;
+  line-height: calc(25 / 20);
+  font-weight: 700;
+  margin-top: 0;
+
+  @include sp {
+    font-size: 1.7rem;
+    line-height: calc(28 / 17);
+
+  }
+}
+
+.p-result-detail-text p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.p-result-detail-body {
+  margin-left: 3rem;
+  @include sp {
+    margin-left: 0;
+    padding-top: 0;
+  }
+}
+
+.p-result-detail-sec-date {
+  display: block;
+  margin-top: 1.2rem;
+  // margin-left: 0.5rem;
+
+  @include sp {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+.p-result-detail-pop-small {
+  width: 10rem;
+  @include sp {
+    width: 8rem;
+  }
+}

@@ -1,19 +1,43 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
-.p-search-title {
-  display: flex;
-  column-gap: 62.6rem;
+.p-search {
   padding-top: 6.6rem;
+  padding-bottom: 20rem;
 
   @include sp {
     padding-top: 3.6rem;
-    column-gap: 8.1rem;
-
   }
 }
-.p-search-items {
-  margin-top: 4.2rem;
+
+.p-search-title {
+  display: flex;
+  column-gap: 62.6rem;
+
+  @include sp {
+    column-gap: 8.1rem;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+  }
 }
 
+.p-search-items {
+  margin-top: 4.2rem;
+  row-gap: 3.9rem;
+}
 
+.p-search-text {
+  line-height: calc(30 / 18);
+
+  @include sp {
+    line-height: calc(30 / 16);
+    margin-top: 0.8rem;
+  }
+}
+
+.p-pagination-search {
+  margin-top: 0;
+  @include sp {
+    margin-top: 1.6rem;
+  }
+}

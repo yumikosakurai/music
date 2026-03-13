@@ -6,7 +6,7 @@
   padding-bottom: 9rem;
 
   @include sp {
-    padding-top: 4.7rem;
+    padding-top: 4.6rem;
     padding-bottom: 5rem;
   }
   &__text {
@@ -21,6 +21,7 @@
       line-height: calc(30 / 16);
     }
   }
+
   &__submit {
     width: 25rem;
     height: 5rem;
@@ -35,8 +36,9 @@
   
     @include sp {
       width: 33.5rem;
+      margin-top: 0.5rem;
     }
-  }
+      }
   &__button {
     font-size: 2.5rem;
     font-weight: 700;
