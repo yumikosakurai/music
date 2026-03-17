@@ -20,6 +20,11 @@
   <meta property="og:site_name" content="きたむらミュージックスクール" />
   <meta property="og:locale" content="ja_JP" />
 
+  <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+
+  <!-- -----------------ファビコン----------------- -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
   <!-- google font設定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +32,6 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/reset.css" />
   <!-- SwiperのCSSを読み込み -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -35,11 +39,11 @@
 </head>
 
 <body>
-    <!-- -------------ヘッダー----------------- -->
+  <!-- -------------ヘッダー----------------- -->
   <header class="l-header">
     <div class="l-header__inner l-header-inner inner">
       <div class="l-header__title">
-        <h1>
+        <div>
           <a href="./index.html">
             <span class="l-header__logo">
               <img src="./images/logo-red.png" alt="音符のアイコン">
@@ -49,16 +53,17 @@
               <span class="l-header__name-sub">ミュージックスクール</span>
             </span>
           </a>
-        </h1>
+        </div>
       </div>
       <div class="l-header__right">
 
         <!-- ハンバーガーボタン -->
-        <div class="hamburger sp-only" aria-label="メニュー">
+        <button class="hamburger sp-only" aria-label="メニュー">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
+
 
         <ul class="l-header__nav l-header-nav">
           <li>
@@ -107,8 +112,8 @@
         </ol>
       </div>
     </div>
-<!-- -----------------------result-detail-------------------- -->
- 
+    <!-- -----------------------result-detail-------------------- -->
+
     <section class="p-result-detail">
       <div class="inner">
         <div class="p-result-detail__content">
@@ -118,14 +123,13 @@
               ポップス
             </div>
           </div>
-          <p class="p-result-detail-first-text">
+          <h1 class="p-result-detail-first-text">
             タイトルが入ります。タイトルが入ります。タイトルが入ります。
-          </p>
+          </h1>
           <time class="p-blog-list__date p-result-detail-date" datetime="0000-00-00">0000.00.00</time>
 
 
           <div class="p-result-detail-profile">
-            <!-- <div class="p-result-detail-profile-table"> -->
             <table class="p-result-detail-table">
               <tbody>
                 <tr>
@@ -168,7 +172,7 @@
 
               <div class="p-blog-detail__card p-result-detail-card">
                 <div class="p-blog-detail__photo pc-only">
-                  <img src="./images/blog01.jpg" alt="">
+                  <img src="./images/blog01.jpg" alt="歌っている女性">
                 </div>
                 <div class="p-blog-detail__item-text">
                   タイトルが入ります。タイトルが入ります。タイトルが入ります。
@@ -182,7 +186,7 @@
 
               <div class="p-blog-detail__card p-result-detail-card">
                 <div class="p-blog-detail__photo pc-only">
-                  <img src="./images/blog01.jpg" alt="">
+                  <img src="./images/blog01.jpg" alt="歌っている女性">
                 </div>
                 <div class="p-blog-detail__item-text">
                   タイトルが入ります。タイトルが入ります。タイトルが入ります。
@@ -197,8 +201,8 @@
           <div class="p-blog-list__items p-result-detail-items">
             <div class="p-blog-list__item p-result-detail-item">
               <div class="p-top-blog-photo p-result-detail-image">
-                  <img src="./images/voice02.jpg" alt="生徒さん2">
-                <div class="p-photo-pop p-result-detail-pop-small">
+                <img src="./images/voice02.jpg" alt="生徒さん2">
+                <div class="p-photo-pop p-result-pop">
                   ロック
                 </div>
               </div>
@@ -213,8 +217,8 @@
 
             <div class="p-blog-list__item p-result-detail-item">
               <div class="p-top-blog-photo p-result-detail-image">
-                  <img src="./images/voice03.jpg" alt="生徒さん3">
-                <div class="p-photo-pop p-result-detail-pop-small">
+                <img src="./images/voice03.jpg" alt="生徒さん3">
+                <div class="p-photo-pop p-result-pop">
                   ジャズ
                 </div>
               </div>
@@ -229,8 +233,8 @@
 
             <div class="p-blog-list__item p-result-detail-item">
               <div class="p-top-blog-photo p-result-detail-image">
-                  <img src="./images/result04.jpg" alt="生徒さん4">
-                <div class="p-photo-pop p-result-detail-pop-small">
+                <img src="./images/result04.jpg" alt="生徒さん4">
+                <div class="p-photo-pop p-result-pop">
                   ラテン
                 </div>
               </div>
@@ -242,11 +246,11 @@
               </div>
             </div>
 
-          </div> 
+          </div>
 
         </div>
       </div>
-        
+
     </section>
 
     <!-- ------------------フィックスアリア トップに戻るボタン--------------------   -->
@@ -289,7 +293,7 @@
           </a>
         </div>
         <div class="l-footer__copyright">
-          Copyright &copy; 0000 KITAMURA music school Inc. All Rights
+          Copyright &copy; 0000 KITAMURA music school Inc.All Rights
         </div>
         <div class="l-footer-sns sns">
           <a href="#" class="l-sns__link" target="_blank" rel="noopener noreferrer">

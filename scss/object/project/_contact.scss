@@ -155,26 +155,14 @@ input[type="checkbox"] {
   @include sp {
     margin-top: 0.4rem;
     line-height: calc(25 / 15);
-
   }
-
 }
 
 .p-contact-form__submit {
-  width: 25rem;
-  height: 5rem;
-  background: #CB0000;
-  color: #FFFFFF;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin: 0 auto;
   margin-top: 1.7rem;
   // margin-bottom: 10rem;
 
   @include sp {
-    width: 33.5rem;
     margin-top: 5rem;
   }
 }
@@ -191,8 +179,12 @@ input[type="checkbox"] {
 
 }
 
+
 input::placeholder,
 textarea::placeholder {
   color: #B2B2B2;
   opacity: 1;
+  font-size: 1.5rem;
+  line-height: calc(33 / 15);
 }
+

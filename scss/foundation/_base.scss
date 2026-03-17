@@ -16,15 +16,34 @@
   }
 }
 
+// .sp-only {
+//   display: none;
+// }
+
+// .pc-only {
+//   display: block;
+// }
+
+// @include sp {
+//   .sp-only {
+//     display: inline;
+//   }
+
+//   .pc-only {
+//     display: none;
+//   }
+// }
+
 body {
   font: {
-    family: "YuGothic", "Noto Sans JP", "Source Han Sans", "M+ FONTS";
+    family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Noto Sans JP",
+    sans-serif;
     optical-sizing: auto;
     weight: 500;
     style: normal;
     size: 1.8rem;
   }
-
+  
   letter-spacing: 0;
   color: #000000;
   line-height: calc(30 / 18);
