@@ -389,8 +389,9 @@
       width: 33.5rem;
       margin-top: 6.3rem;
       justify-content: center;
+      padding-left: 0;
     }
-
+    
     &__connect__photo {
       width: 20rem;
     }
@@ -438,6 +439,9 @@
     display: block;
     object-fit: cover;
   }
+}
+.p-blog-detail-pop {
+  width: 8rem;
 }
 
 .p-blog-detail__sentence p {

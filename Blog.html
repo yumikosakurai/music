@@ -20,6 +20,11 @@
   <meta property="og:site_name" content="きたむらミュージックスクール" />
   <meta property="og:locale" content="ja_JP" />
 
+  <!-- -----------------ファビコン----------------- -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+
   <!-- google font設定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +32,6 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/reset.css" />
   <!-- SwiperのCSSを読み込み -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -38,7 +42,7 @@
   <header class="l-header">
     <div class="l-header__inner l-header-inner inner">
       <div class="l-header__title">
-        <h1>
+        <div>
           <a href="./index.html">
             <span class="l-header__logo">
               <img src="./images/logo-red.png" alt="音符のアイコン">
@@ -48,15 +52,16 @@
               <span class="l-header__name-sub">ミュージックスクール</span>
             </span>
           </a>
-        </h1>
+        </div>
       </div>
       <div class="l-header__right">
         <!-- ハンバーガーボタン -->
-        <div class="hamburger sp-only" aria-label="メニュー">
+        <button class="hamburger sp-only" aria-label="メニュー">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
+
 
         <ul class="l-header__nav l-header-nav">
           <li>
@@ -83,9 +88,9 @@
         </picture>
 
       </div>
-      <h2 class="p-plan-fv-catch p-blog-fv-catch">
+      <h1 class="p-plan-fv-catch p-blog-fv-catch">
         ブログ
-      </h2>
+      </h1>
     </section>
 
 
@@ -126,7 +131,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</h3>
+              <div class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -148,7 +153,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">集客してる間は売れないという法則</h3>
+              <div class="p-blog-list__title">集客してる間は売れないという法則</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -169,7 +174,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">フォロワーではなくファンを増やせとは？</h3>
+              <div class="p-blog-list__title">フォロワーではなくファンを増やせとは？</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -192,7 +197,7 @@
 
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</h3>
+              <div class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -213,7 +218,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">集客してる間は売れないという法則</h3>
+              <div class="p-blog-list__title">集客してる間は売れないという法則</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -234,7 +239,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">フォロワーではなくファンを増やせとは？</h3>
+              <div class="p-blog-list__title">フォロワーではなくファンを増やせとは？</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -256,7 +261,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</h3>
+              <div class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -277,7 +282,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">集客してる間は売れないという法則</h3>
+              <div class="p-blog-list__title">集客してる間は売れないという法則</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -298,7 +303,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">フォロワーではなくファンを増やせとは？</h3>
+              <div class="p-blog-list__title">フォロワーではなくファンを増やせとは？</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -319,7 +324,7 @@
               </a>
             </div>
             <div class="p-blog-list__body">
-              <h3 class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</h3>
+              <div class="p-blog-list__title">アルペジオが劇的に向上する3つの習慣</div>
               <time class="p-blog-list__date" datetime="0000-00-00">0000.00.00</time>
               <div class="p-blog-list__text">
                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
@@ -342,7 +347,6 @@
           </ul>
         </nav>
 
-      </div>
       </div>
     </section>
 
@@ -386,8 +390,9 @@
           </a>
         </div>
         <div class="l-footer__copyright">
-          Copyright &copy; 0000 KITAMURA music school Inc. All Rights
+          Copyright &copy; 0000 KITAMURA music school Inc.All Rights
         </div>
+
         <div class="l-footer-sns sns">
           <a href="#" class="l-sns__link" target="_blank" rel="noopener noreferrer">
             <img src="images/icon-twitter.svg" alt="x" /></a>

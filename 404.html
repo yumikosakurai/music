@@ -20,6 +20,11 @@
   <meta property="og:site_name" content="きたむらミュージックスクール" />
   <meta property="og:locale" content="ja_JP" />
 
+  <!-- -----------------ファビコン----------------- -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+
   <!-- google font設定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,18 +32,17 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/reset.css" />
   <!-- SwiperのCSSを読み込み -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-  <!-- -------------ヘッダー----------------- -->
+  <!---------------ヘッダー------------------->
   <header class="l-header">
     <div class="l-header__inner l-header-inner inner">
       <div class="l-header__title">
-        <h1>
+        <div>
           <a href="./index.html">
             <span class="l-header__logo">
               <img src="./images/logo-red.png" alt="音符のアイコン">
@@ -48,7 +52,7 @@
               <span class="l-header__name-sub">ミュージックスクール</span>
             </span>
           </a>
-        </h1>
+        </div>
       </div>
       <div class="l-header__right">
 
@@ -76,7 +80,7 @@
 
   </header>
 
-  <!-- ---------------メイン-------------------- -->
+  <!-----------------メイン---------------------->
 
   <main>
     <section class="p-top-fv p-plan-fv">
@@ -87,29 +91,12 @@
         </picture>
 
       </div>
-      <h2 class="p-plan-fv-catch">
+      <h1 class="p-plan-fv-catch">
         404 not fonud
-      </h2>
+      </h1>
     </section>
 
-    <!-- パンくずリスト
-    <div class="c-breadcrumbs">
-      <div class="inner">
-        <ol class="c-breadcrumbs__list">
-          <li>
-            <a href="">
-              <span>ホーム</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>送信完了</span>
-            </a>
-          </li>
-        </ol>
-      </div>
-    </div> -->
-
+    <!------------------------404--------------------->
     <section class="p-404">
       <div class="inner">
         <div class="p-404__text">
@@ -117,18 +104,18 @@
             お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。</p>
         </div>
 
-        <div class="p-404__submit">
+        <div class="c-send-submit p-404__submit">
           <a href="./index.html">
-          <button class="p-404__button" type="button">
-            ホームへ戻る
-          </button>
+            <button class="c-send-button p-404__button" type="button">
+              ホームへ戻る
+            </button>
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- -----------------フッター-------------------    -->
+  <!-------------------フッター--------------------->
 
   <footer>
     <div class="l-footer">
@@ -153,8 +140,9 @@
           </a>
         </div>
         <div class="l-footer__copyright">
-          Copyright &copy; 0000 KITAMURA music school Inc. All Rights
+          Copyright &copy; 0000 KITAMURA music school Inc.All Rights
         </div>
+
         <div class="l-footer-sns sns">
           <a href="#" class="l-sns__link" target="_blank" rel="noopener noreferrer">
             <img src="images/icon-twitter.svg" alt="x" /></a>

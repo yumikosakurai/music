@@ -20,6 +20,11 @@
   <meta property="og:site_name" content="きたむらミュージックスクール" />
   <meta property="og:locale" content="ja_JP" />
 
+  <!-- -----------------ファビコン----------------- -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+
   <!-- google font設定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +32,6 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/reset.css" />
   <!-- SwiperのCSSを読み込み -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -39,7 +43,7 @@
   <header class="l-header">
     <div class="l-header__inner l-header-inner inner">
       <div class="l-header__title">
-        <h1>
+        <div>
           <a href="./index.html">
             <span class="l-header__logo">
               <img src="./images/logo-red.png" alt="音符のアイコン">
@@ -49,15 +53,15 @@
               <span class="l-header__name-sub">ミュージックスクール</span>
             </span>
           </a>
-        </h1>
+        </div>
       </div>
       <div class="l-header__right">
         <!-- ハンバーガーボタン -->
-        <div class="hamburger sp-only" aria-label="メニュー">
+        <button class="hamburger sp-only" aria-label="メニュー">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
 
         <ul class="l-header__nav l-header-nav">
           <li>
@@ -142,48 +146,41 @@
               <a href="#" class="p-top-blog__sns-link" target="_blank" rel="noopener noreferrer">
                 <picture>
                   <source media="(max-width:767px)" srcset="./images/twitter-sp.svg">
-                  <img src="./images/twitter.svg" alt="facebook">
+                  <img src="./images/twitter.svg" alt="twitter">
                 </picture>
               </a>
               <a href="#" class="p-top-blog__sns-link" target="_blank" rel="noopener noreferrer">
                 <picture>
                   <source media="(max-width:767px)" srcset="./images/hatena-sp.svg">
-                  <img src="./images/hatena.svg" alt="facebook">
+                  <img src="./images/hatena.svg" alt="hatena">
                 </picture>
               </a>
               <a href="#" class="p-top-blog__sns-link" target="_blank" rel="noopener noreferrer">
                 <picture>
                   <source media="(max-width:767px)" srcset="./images/line-sp.svg">
-                  <img src="./images/line.svg" alt="facebook">
+                  <img src="./images/line.svg" alt="line">
                 </picture>
               </a>
               <a href="#" class="p-top-blog__sns-link" target="_blank" rel="noopener noreferrer">
                 <picture>
                   <source media="(max-width:767px)" srcset="./images/pocket-sp.svg">
-                  <img src="./images/pocket.svg" alt="facebook">
+                  <img src="./images/pocket.svg" alt="pocket">
                 </picture>
               </a>
             </div>
 
-            <!-- <a href="" class="c-sns-share__item c-sns-share-item c-sns-share-item--facebook">
-              <span class="sns-icon">
-                <img src="./images/icon-share-facebook.svg" alt="facebook">
-              </span>
-              <span class="sns-name sp-none">Facebook</span>
-            </a> -->
-
 
             <div class="p-blog-detail__fir-text">
               本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-              本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+              本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
             </div>
 
 
             <!-- ----------------記事02---------------------- -->
             <h2 class="p-blog-detail__second-title">H2見出しが入ります。H2見出しが入ります。</h2>
             <div class="p-blog-detail__sec-text">
-              本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-              本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+              本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+              本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
             </div>
             <div class="p-blog-detail__image-small">
               <img src="./images/reason01.jpg" alt="ピアノを弾く男性">
@@ -210,7 +207,7 @@
 
                 <div class="p-blog-detail__card">
                   <div class="p-blog-detail__photo pc-only">
-                    <img src="./images/blog01.jpg" alt="">
+                    <img src="./images/blog01.jpg" alt="マイクを持つ女性">
                   </div>
                   <div class="p-blog-detail__item-text">
                     タイトルが入ります。タイトルが入ります。タイトルが入ります。
@@ -224,7 +221,7 @@
 
                 <div class="p-blog-detail__card">
                   <div class="p-blog-detail__photo pc-only">
-                    <img src="./images/blog01.jpg" alt="">
+                    <img src="./images/blog01.jpg" alt="マイクを持つ女性">
                   </div>
                   <div class="p-blog-detail__item-text">
                     タイトルが入ります。タイトルが入ります。タイトルが入ります。
@@ -241,7 +238,7 @@
               <div class="p-blog-detail__connect__item">
                 <div class="p-top-blog-photo p-blog-detail__connect__photo">
                   <img src="./images/blog01.jpg" alt="マイクを持つ女性">
-                  <div class="p-photo-pop">
+                  <div class="p-photo-pop p-blog-detail-pop">
                     ギター
                   </div>
                 </div>
@@ -257,7 +254,7 @@
               <div class="p-blog-detail__connect__item">
                 <div class="p-top-blog-photo p-blog-detail__connect__photo">
                   <img src="./images/blog01.jpg" alt="マイクを持つ女性">
-                  <div class="p-photo-pop">
+                  <div class="p-photo-pop p-blog-detail-pop">
                     ギター
                   </div>
                 </div>
@@ -273,7 +270,7 @@
               <div class="p-blog-detail__connect__item">
                 <div class="p-top-blog-photo p-blog-detail__connect__photo">
                   <img src="./images/blog01.jpg" alt="マイクを持つ女性">
-                  <div class="p-photo-pop">
+                  <div class="p-photo-pop p-blog-detail-pop">
                     ギター
                   </div>
                 </div>
@@ -310,27 +307,6 @@
             <div class="p-blog-detail-search__title">
               <p>ブログ内を検索</p>
             </div>
-            <!-- <div class="p-blog-detail-search__contents">
-              <a href="#" class="search-space">
-                <img src="./images/search-square.jpg" alt="検索の背景" class="search-bg">
-                <span class="black-backgroud">
-                  <img src="./images/blackーsquare.jpg" alt="アイコンの背景" class="black-bg-img">
-                  <span class="search-icon">
-                    <img src="./images/icon-search.svg" alt="検索のアイコン" class="search-icon-img">
-                  </span>
-                </span>
-              </a>
-            </div> -->
-
-            <!-- <form action="./search.html">
-              <input type="text" name="s" placeholder="検索ワード">
-              <button type="submit" class="search-btn">
-                <span>
-                  <img src="./images/common/icon-search.svg" alt="検索">
-                </span>
-              </button>
-            </form>
- -->
 
             <div class="p-blog-detail-search__contents">
 
@@ -421,9 +397,9 @@
             </div>
 
 
-
           </div>
         </div>
+      </div>
     </section>
 
     <!-- ------------------フィックスアリア トップに戻るボタン--------------------   -->
@@ -466,8 +442,9 @@
           </a>
         </div>
         <div class="l-footer__copyright">
-          Copyright &copy; 0000 KITAMURA music school Inc. All Rights
+          Copyright &copy; 0000 KITAMURA music school Inc.All Rights
         </div>
+
         <div class="l-footer-sns sns">
           <a href="#" class="l-sns__link" target="_blank" rel="noopener noreferrer">
             <img src="images/icon-twitter.svg" alt="x" /></a>

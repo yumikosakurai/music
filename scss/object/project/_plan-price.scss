@@ -34,13 +34,14 @@
 
 
 .p-plan {
-  padding-top: 6.7rem;
+  padding-top: 7.2rem;
   padding-bottom: 22.3rem;
 
   @include sp {
     padding-top: 5rem;
-    padding-bottom: 20rem;
+    padding-bottom: 18.6rem;
   }
+
 
 
   &__title {
@@ -132,13 +133,13 @@
     font-weight: 700;
     line-height: 100%;
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 6.5rem;
 
     @include sp {
       margin-top: 4.5rem;
     }
   }
-  
+
   &__table {
     margin-top: 5rem;
 
@@ -277,6 +278,7 @@
         font-size: 1.7rem;
         font-weight: 500;
         line-height: calc(25 / 17);
+        align-items: center;
 
         @include sp {
           font-size: 1.6rem;
@@ -294,7 +296,7 @@
         &.th-thick {
           font-size: 1.7rem;
           font-weight: 700;
-          line-height: calc(30 / 17);
+          line-height: calc(30 / 17)
         }
 
       }
@@ -327,8 +329,13 @@
     justify-content: center;
     align-items: center;
     letter-spacing: 0;
+
     @include sp {
       margin-top: 2rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: calc(30 / 16);
+
     }
   }
 }
