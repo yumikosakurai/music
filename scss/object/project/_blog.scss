@@ -80,6 +80,7 @@
 
     @include sp {
       margin-left: 0;
+      line-height: calc(30 / 20);
     }
   }
 
@@ -102,7 +103,7 @@
     margin-top: 1.1rem;
     font-size: 1.8rem;
     font-weight: 500;
-    line-height: calc(30 / 16);
+    line-height: calc(30 / 18);
 
 
     @include sp {
@@ -154,9 +155,9 @@
     align-items: center;
     width: 5rem;
     height: 5rem;
-    border: 1px solid #333;
+    border: 1px solid #000;
     text-decoration: none;
-    color: #333;
+    color: #000;
 
     @include sp {
       width: 4.4rem;
@@ -165,7 +166,7 @@
 
 
     &:hover {
-      background: #333;
+      background: #000;
       color: #fff;
     }
 
@@ -174,17 +175,33 @@
 
 .p-pagination {
   margin-top: 7.5rem;
-  // margin-bottom: 21rem;
 
+  // margin-bottom: 21rem;
   @include sp {
     margin-top: 5.9rem;
     // margin-bottom: 14.3rem;
   }
 }
 
+.p-pagination__list li {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: calc(30 / 18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #000;
+
+  @include sp {
+    font-size: 1.6rem;
+    line-height: calc(28 / 16);
+  }
+}
 
 /* 現在のページ */
 .p-pagination__list .is-active {
-  background: #333;
+  background: #000;
   color: #fff;
 }

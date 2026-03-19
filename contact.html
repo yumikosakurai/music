@@ -23,7 +23,7 @@
   <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
 
   <!-- -----------------ファビコン----------------- -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.svg">
 
   <!-- google font設定 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,9 +107,7 @@
             </a>
           </li>
           <li>
-            <a href="./contact.html">
-              <span>お問い合わせ</span>
-            </a>
+            <span>お問い合わせ</span>
           </li>
         </ol>
       </div>
@@ -118,7 +116,7 @@
 
     <section class="p-contact-form">
       <div class="inner">
-        <form action="" method="post">
+        <form action="./contact-send.html" method="post">
           <div class="p-contact-form__text">
             <p>当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。<br>
               通常３営業日以内にメールにてご連絡させていただきます。</p>
@@ -169,7 +167,7 @@
                 </label>
               </dt>
 
-              <dd class="p-contact-form__input form-checkbox">
+              <dd class="p-contact-form__input">
                 <div class="form-checkbox">
                   <label>
                     <input type="checkbox" name="purpose[]" value="plan">
@@ -190,7 +188,7 @@
 
                 </div>
               </dd>
-            </dl> 
+            </dl>
 
             <dl class="p-contact-form__input form-detail">
               <dt class="p-contact-form__label p-contact-form-content">
@@ -202,9 +200,9 @@
             </dl>
 
             <div class="c-send-submit p-contact-form__submit">
-              <a href="./contact-send.html" class="c-send-button p-contact-form__button">
+              <button type="submit" class="c-send-button p-contact-form__button">
                 送 信
-              </a>
+              </button>
             </div>
 
 

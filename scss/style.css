@@ -2314,12 +2314,12 @@ img {
           align-items: center;
   width: 5rem;
   height: 5rem;
-  border: 1px solid #333;
+  border: 1px solid #000;
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
 .p-pagination__list a:hover {
-  background: #333;
+  background: #000;
   color: #fff;
 }
 
@@ -2336,7 +2336,7 @@ img {
 
 /* 現在のページ */
 .p-pagination__list .is-active {
-  background: #333;
+  background: #000;
   color: #fff;
 }
 

@@ -29,6 +29,12 @@
  
   }
 }
+.p-search-list-title {
+    line-height: calc(30 / 20);
+@include sp {
+  line-height: calc(30 / 20);
+}
+}
 
 .p-search-text {
   line-height: calc(30 / 18);
