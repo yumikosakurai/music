@@ -86,35 +86,6 @@
   }
 }
 
-// .c-sns-share-item {
-//   width: 105px;
-//   height: 40px;
-//   display: inline-flex;        /* 横並び */
-//   align-items: center;         /* 縦中央 */
-//   gap: 13.5px;                    /* アイコンと文字の間 */
-//   padding: 10px 16px;          /* 内側余白 */
-//   text-decoration: none;       /* 下線消す */
-//   font-weight: 600;
-//   flex-direction: row;
-//   white-space: nowrap;
-// }
-
-// .c-sns-share-item--facebook {
-//   background-color: #425893;   /* 指定の背景色 */
-//   color: #fff;                 /* 文字色 */
-// }
-
-// .sns-icon {
-//   width: 11px;   /* サイズ調整 */
-//   height: 2rem;
-//   display: block;
-// }
-// .sns-name {
-//   font-size: 10px;
-// }
-
-
-
 .p-blog-detail {
 
   &__fir-text {
@@ -342,6 +313,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     /* はみ出した部分を隠す */
+
     // text-overflow: ellipsis; ... を付ける 
 
   }
@@ -391,7 +363,7 @@
       justify-content: center;
       padding-left: 0;
     }
-    
+
     &__connect__photo {
       width: 20rem;
     }
@@ -440,6 +412,7 @@
     object-fit: cover;
   }
 }
+
 .p-blog-detail-pop {
   width: 8rem;
 }
@@ -467,10 +440,11 @@
   text-align: left;
   margin-top: 1.3rem;
   display: block;
+  font-size: 1.7rem;
+  line-height: calc(30 / 17);
+
 
   @include sp {
-    font-size: 1.7rem;
-    line-height: calc(30 / 17);
     margin-top: 0.3rem;
   }
 }
@@ -494,6 +468,7 @@
   color: #fff;
   font-size: 1.8rem;
   font-weight: 700;
+  line-height: calc(33 / 18);
 
   @include sp {
     width: 33.5rem;
@@ -612,12 +587,17 @@
   width: 4rem;
   height: 4rem;
   z-index: 2;
+  cursor: pointer;
 
   @include sp {
     width: 5.4rem;
     height: 5.4rem;
   }
-}
+  &:hover {
+    opacity: 0.7;
+  }
+
+} 
 
 .black-bg-img {
   width: 100%;

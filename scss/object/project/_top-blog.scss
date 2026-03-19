@@ -24,6 +24,13 @@
 }
 
 
+.p-top-blog-item:hover {
+  opacity: 0.6;
+  transition: transform 0.3s ease;
+}
+
+
+
 .p-top-blog-photo {
   position: relative;
 
@@ -33,6 +40,7 @@
     margin-top: 3.9rem;
   }
 }
+
 
 .p-top-blog-introd {
   margin-top: 1rem;

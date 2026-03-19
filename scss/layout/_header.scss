@@ -58,8 +58,8 @@
   }
 
   &__name {
-    margin-top: 1.8rem;
-    margin-bottom: 1.4rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
     line-height: 1.25;
 
     @include sp {
@@ -74,7 +74,7 @@
     line-height: calc(23 / 15);
 
     @include sp {
-      font-size: 13px;
+      font-size: 1.3rem;
       line-height: calc(14 / 13);
     }
 
@@ -175,7 +175,7 @@
 
 .l-header-nav li {
   // padding: 1.65rem;
-  padding: 1.5rem 2rem 1rem;
+  padding: 2.55rem 2rem 2rem;
 }
 
 .l-header-nav li a {

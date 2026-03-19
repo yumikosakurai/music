@@ -9,12 +9,13 @@
     padding-top: 4.7rem;
     padding-bottom: 5rem;
   }
+
   &__text {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: calc(30 / 18);
     text-align: center;
-  
+
     @include sp {
       text-align: left;
       font-size: 1.6rem;
@@ -25,6 +26,12 @@
   &__submit {
     margin-top: 4rem;
   }
-}
 
+  &__button {
+    display: inline-block;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+}
 
