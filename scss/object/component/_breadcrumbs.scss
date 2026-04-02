@@ -13,7 +13,7 @@
 
 
 .c-breadcrumbs__inner {
-  height: 5rem;
+  height: 100%;
   display: flex;
   align-items: center;
   // padding-bottom: 1.7rem;
@@ -40,7 +40,10 @@
   gap: 1.8rem;
   // line-height: 0.5;
   color: rgba(0, 0, 0, 1);
-}
+  @include sp {
+    margin-top: 0.8rem;
+  }
+  }
 
 .c-breadcrumbs__list li {
   flex: 0 0 auto; // ← ★これが重要（縮まない）

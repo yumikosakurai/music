@@ -3,11 +3,11 @@
 
 .p-top-blog {
   padding-top: 6.8rem;
-  padding-bottom: 20.5rem;
+  padding-bottom: 20rem;
 
   @include sp {
     padding-top: 4.3rem;
-    padding-bottom: 19rem;
+    padding-bottom: 19.5rem;
   }
 }
 
@@ -21,7 +21,7 @@
 
   @include sp {
     display: block;
-    margin-top: 3rem;
+    margin-top: 0;
   }
 }
 
@@ -44,10 +44,10 @@
 
 
 .p-top-blog-introd {
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   @include sp {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 
@@ -95,7 +95,7 @@
   margin-top: 0.8rem;
 
   @include sp {
-    margin-top: 0.8rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -113,6 +113,11 @@
   border-bottom: 0.01rem solid rgba(0, 0, 0, 1);
   color: rgba(0, 0, 0, 1);
   padding-bottom: 0;
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
+  @include sp {
+    margin-top: 3.7rem;
+  }
 }
 
 .p-top-blog-circle {

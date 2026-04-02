@@ -3,7 +3,7 @@
 
 .p-search {
   padding-top: 6.6rem;
-  padding-bottom: 20rem;
+  padding-bottom: 21rem;
 
   @include sp {
     padding-top: 3.6rem;
@@ -49,14 +49,19 @@
 
 .p-search-text {
   line-height: calc(30 / 18);
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* ★ 3行に制限 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 
   @include sp {
     line-height: calc(30 / 16);
     margin-top: 0.8rem;
   }
 }
-  
-  // -webkit-line-clamp: 3; 
+picture {
+    display: block;   /* ← これが正しい */
+  }
 
 
 @include sp {
@@ -67,8 +72,6 @@
     -webkit-line-clamp: 5; // SPは2行
   }
 }
-
-
 
 .p-pagination-search {
   margin-top: 0;

@@ -9,7 +9,7 @@
 
   @include sp {
     margin-top: 4.5rem;
-    row-gap: 3.9rem;
+    row-gap: 3.95rem;
   }
 }
 
@@ -59,15 +59,15 @@
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
+      object-fit: cover;
 
       picture {
         display: block;
       }
     }
   }
-
 
 
   &__title {
@@ -92,7 +92,7 @@
       margin-left: 0;
       display: block;
       text-align: right;
-      // margin-top: 1.5rem;
+      margin-top: 0.6rem;
     }
   }
 
@@ -191,7 +191,7 @@
 }
 
 /* 現在のページ */
-.p-pagination__list .is-active span{
+.p-pagination__list .is-active span {
   background: #000;
   color: #fff;
 }
