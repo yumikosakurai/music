@@ -12,12 +12,23 @@
 
 .p-search-title {
   display: flex;
-  column-gap: 62.6rem;
-
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5rem;
+  
   @include sp {
-    column-gap: 8.1rem;
+    column-gap: 5rem;
     font-size: 1.8rem;
     line-height: calc(30 / 18);
+  }
+  .p-search-textword {
+    flex: 1;
+    min-width: 0; // 長文時の折り返しを許可
+    word-break: break-word; // 長すぎる語を改行
+  }
+
+  .p-search-count {
+    white-space: nowrap; // 「28件」が折り返されずに固定される
   }
 }
 

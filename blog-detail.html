@@ -200,8 +200,10 @@
 
             <div class="p-blog-detail__pager">
               <!-- 前の記事 -->
-              <div class="p-blog-detail__pager-item p-blog-detail__pager-item-left">
-                <a href="#" class="p-blog-detail__tag p-blog-detail__tag-left">◀︎ 前の記事</a>
+              <!-- <div class="p-blog-detail__pager-item p-blog-detail__pager-item-left">
+                <a href="#" class="p-blog-detail__tag p-blog-detail__tag-left">◀︎ 前の記事</a> -->
+              <a href="./blog-detail.html" class="p-blog-detail__pager-item p-blog-detail__pager-item-left">
+                <span class="p-blog-detail__tag p-blog-detail__tag-left">◀︎ 前の記事</span>
 
                 <div class="p-blog-detail__card">
                   <div class="p-blog-detail__photo pc-only">
@@ -211,11 +213,11 @@
                     タイトルが入ります。タイトルが入ります。タイトルが入ります。
                   </div>
                 </div>
-              </div>
+              </a>
 
               <!-- 次の記事 -->
-              <div class="p-blog-detail__pager-item p-blog-detail__pager-item-right">
-                <a href="#" class="p-blog-detail__tag p-blog-detail__tag-right">次の記事 ▶︎</a>
+              <a href="./blog-detail.html" class="p-blog-detail__pager-item p-blog-detail__pager-item-right">
+                <span class="p-blog-detail__tag p-blog-detail__tag-right">次の記事 ▶︎</span>
 
                 <div class="p-blog-detail__card">
                   <div class="p-blog-detail__photo pc-only">
@@ -225,18 +227,18 @@
                     タイトルが入ります。タイトルが入ります。タイトルが入ります。
                   </div>
                 </div>
-              </div>
+              </a>
 
             </div>
 
-            <h3 class="p-blog-detail__connect">関連記事</h3>
+            <a href="./blog-detail.html" class="p-blog-detail__connect">関連記事</a>
 
             <div class="p-blog-list__items p-blog-detail-connect__items">
 
               <div class="p-blog-detail__connect__item">
                 <div class="p-top-blog-photo p-blog-detail__connect__photo">
                   <img src="./images/blog01.jpg" alt="マイクを持つ女性">
-                  <div class="p-photo-pop p-blog-detail-pop">
+                  <div class="c-photo-pop p-blog-detail-pop">
                     ギター
                   </div>
                 </div>
@@ -252,7 +254,7 @@
               <div class="p-blog-detail__connect__item">
                 <div class="p-top-blog-photo p-blog-detail__connect__photo">
                   <img src="./images/blog01.jpg" alt="マイクを持つ女性">
-                  <div class="p-photo-pop p-blog-detail-pop">
+                  <div class="c-photo-pop p-blog-detail-pop">
                     ギター
                   </div>
                 </div>
@@ -268,7 +270,7 @@
               <div class="p-blog-detail__connect__item">
                 <div class="p-top-blog-photo p-blog-detail__connect__photo">
                   <img src="./images/blog01.jpg" alt="マイクを持つ女性">
-                  <div class="p-photo-pop p-blog-detail-pop">
+                  <div class="c-photo-pop p-blog-detail-pop">
                     ギター
                   </div>
                 </div>
@@ -310,11 +312,11 @@
 
               <form action="./search.html" class="search-space">
 
-                <img src="./images/search-square.jpg" alt="検索の背景" class="search-bg">
+                <!-- <img src="./images/search-square.jpg" alt="検索の背景" class="search-bg"> -->
                 <input type="text" name="s" placeholder="検索ワード" class="search-input">
 
-                <span class="black-backgroud">
-                  <img src="./images/blackーsquare.jpg" alt="アイコンの背景" class="black-bg-img">
+                <span class="black-background">
+                  <!-- <img src="./images/blackーsquare.jpg" alt="アイコンの背景" class="black-bg-img"> -->
 
                   <button type="submit" class="search-icon">
                     <img src="./images/icon-search.svg" alt="検索のアイコン" class="search-icon-img">
@@ -333,33 +335,34 @@
             </div>
 
             <div class="p-blog-detail-article__items p-blog-detail-article-items">
-              <div class="p-blog-detail-article__item">
+              <a href="./blog-detail.html" class="p-blog-detail-article__item">
+                <!-- <div class="p-blog-detail-article__item"> -->
                 <div class="article-recommend-photo">
                   <img src="./images/gray-article.jpg" alt="おすすめ記事の背景">
                 </div>
                 <div class="article-recommend-text">
                   <p>タイトルが入ります。タイトル</p>
                 </div>
-              </div>
+                <!-- </div> -->
+              </a>
 
-              <div class="p-blog-detail-article__item">
+              <a href="./blog-detail.html" class="p-blog-detail-article__item">
                 <div class="article-recommend-photo">
                   <img src="./images/gray-article.jpg" alt="おすすめ記事の背景">
                 </div>
                 <div class="article-recommend-text">
                   <p>タイトルが入ります。タイトル</p>
                 </div>
-              </div>
+              </a>
 
-              <div class="p-blog-detail-article__item">
+              <a href="./blog-detail.html" class="p-blog-detail-article__item">
                 <div class="article-recommend-photo">
                   <img src="./images/gray-article.jpg" alt="おすすめ記事の背景">
                 </div>
                 <div class="article-recommend-text">
                   <p>タイトルが入ります。タイトル</p>
                 </div>
-              </div>
-
+              </a>
             </div>
 
             <div class="p-blog-detail__category p-blog-detail-category c-sidebar-title">
@@ -372,26 +375,31 @@
                   <p>カテゴリー</p>
                 </a>
               </div>
+
               <div class="p-blog-detail-category__contents">
                 <a href="" class="category-text">
                   <p>カテゴリー</p>
                 </a>
               </div>
+
               <div class="p-blog-detail-category__contents">
-                <a href="#" class="category-text">
+                <a href="" class="category-text">
                   <p>カテゴリー</p>
                 </a>
               </div>
+
               <div class="p-blog-detail-category__contents">
-                <a href="#" class="category-text">
+                <a href="" class="category-text">
                   <p>カテゴリー</p>
                 </a>
               </div>
+
               <div class="p-blog-detail-category__contents">
-                <a href="#" class="category-text">
+                <a href="" class="category-text">
                   <p>カテゴリー</p>
                 </a>
               </div>
+
             </div>
 
 

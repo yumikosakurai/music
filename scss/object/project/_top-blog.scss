@@ -12,7 +12,9 @@
 }
 
 .p-top-blog-items {
-  display: flex;
+  // display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: flex-start;
   column-gap: 5rem;
   margin-top: 3.6rem;
@@ -22,7 +24,6 @@
     margin-top: 3rem;
   }
 }
-
 
 .p-top-blog-item:hover {
   opacity: 0.6;
@@ -50,7 +51,7 @@
   }
 }
 
-.p-photo-pop {
+.c-photo-pop {
   position: absolute;
   top: 0;
   left: 0;
@@ -62,6 +63,12 @@
   font-weight: 700;
   line-height: calc(25 / 15);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  /* 横方向中央 */
+  align-items: center;
+  /* 縦方向中央 */
+
 
   @include sp {
     width: 9rem;
@@ -94,9 +101,10 @@
 
 .p-top-blog-link {
   text-align: right;
-@include sp {
-  text-align: center;
-}
+
+  @include sp {
+    text-align: center;
+  }
 }
 
 .p-top-blog-word {

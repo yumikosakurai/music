@@ -5,34 +5,17 @@
   .pc-only {
     display: none !important;
   }
-  .sp-only {
-    display: inline;
-  }
+  // .sp-only {
+  //   display: inline;
+  // }
 }
 
 @include pc {
   .sp-only {
-    display: none;
+    display: none !important;
   }
 }
 
-// .sp-only {
-//   display: none;
-// }
-
-// .pc-only {
-//   display: block;
-// }
-
-// @include sp {
-//   .sp-only {
-//     display: inline;
-//   }
-
-//   .pc-only {
-//     display: none;
-//   }
-// }
 
 body {
   font: {
@@ -47,10 +30,12 @@ body {
   letter-spacing: 0;
   color: #000000;
   line-height: calc(30 / 18);
+  padding-top: 8rem;
 
   @include sp {
     font-size: 1.6rem;
     line-height: calc(30 / 16);
+    padding-top: 50px;
   }
 }
 
@@ -74,27 +59,17 @@ html {
   }
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
-body {
-  padding-top: 8rem;
-
-  @include sp {
-    padding-top: 50px;
-  }
-}
-
-
+// html,
+// body {
+//   overflow-x: hidden;
+// }
 
 main {
   position: relative;
 }
 
 
-a {
+a, button{
   display: inline-block;
   text-decoration: none;
   transition: opacity 0.4s;
@@ -103,7 +78,9 @@ a {
 a:hover {
   opacity: 0.7;
   cursor: pointer;
+  
 }
+
 
 img {
   width: 100%;
@@ -112,21 +89,21 @@ img {
 }
 
 .inner {
-  width: 100%;
-  // max-width: 940px;
-  // padding-inline: vw(30, 1080);
-  // width: min(vw(880,940),880px);
-  max-width: 88rem;
-  margin: 0 auto;
-  height: 100%;
-
-
+  // width: 100%;
+  // max-width: 88rem;
+  width: 88rem;
+  margin-inline: auto;
+  position: relative;
+  // margin: 0 auto;
+  // height: 100%;
 
   @include sp {
-    width: 100%;
-    margin: 0 auto;
-    padding-inline: 2rem !important;
+    width: 33.5rem;
+    // width: 100%;
+    // margin: 0 auto;
+    // padding-inline: 2rem !important;
   }
 
 }
+
 

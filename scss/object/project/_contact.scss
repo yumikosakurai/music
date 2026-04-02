@@ -5,7 +5,7 @@
 .p-contact-form__input input[type="email"],
 .p-contact-form__input input[type="tel"],
 .p-contact-form__textarea textarea {
-  padding: 1rem;
+  padding: 1rem 2rem;
   border: 1px solid #ccc;
   background: #fff;
   height: 4rem;
@@ -19,29 +19,42 @@
   }
 }
 
-.p-contact-form__textarea textarea {
-  // height: 150px;
-  resize: vertical;
-  height: 30rem;
-
-  @include sp {
-    width: 33.5rem;
-    height: 19rem;
-  }
-}
-
 .form-checkbox {
   row-gap: 0.9rem;
 }
+// .form-checkbox span {
+//   vertical-align: middle;
+// }
+.form-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 
 input[type="checkbox"] {
   appearance: none;
-  // appearance: auto !important;
   width: 2rem;
   height: 2rem;
-  border: 0.05rem solid rgba(0, 0, 0, 1);
-  border-radius: 0;
+  border: 1px solid #000;
+  position: relative;
+  cursor: pointer;
 }
+
+/* チェック時 */
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 0.6rem;
+  height: 1rem;
+  border: solid #000;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+  top: 0.2rem;
+  left: 0.6rem;
+}
+
+
 
 .p-contact-form {
   padding-top: 6.8rem;
@@ -128,6 +141,7 @@ input[type="checkbox"] {
   line-height: calc(30 / 18);
 }
 
+
 .form-checkbox label {
   display: flex;
   column-gap: 2rem;
@@ -150,10 +164,23 @@ input[type="checkbox"] {
     line-height: calc(25 / 15);
   }
 }
+.p-contact-form__textarea textarea {
+  // height: 150px;
+  // resize: vertical;
+  resize: none;
+  height: 30rem;
+
+  @include sp {
+    width: 33.5rem;
+    height: 19rem;
+  }
+}
+
 
 .p-contact-form__submit {
   margin-top: 1.7rem;
   // margin-bottom: 10rem;
+  
 
   @include sp {
     margin-top: 5rem;

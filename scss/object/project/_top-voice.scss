@@ -11,9 +11,15 @@
     padding-bottom: 5rem;
 
   }
-
 }
 
+.p-top-voice__slider {
+  margin-top: 3.6rem;
+
+  @include sp {
+    margin-top: 3.9rem;
+  }
+}
 
 .p-top-voice-title {
   font-size: 3rem;
@@ -33,6 +39,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .swiper-slide {
   transform: translateZ(0);
 }
@@ -40,17 +47,11 @@
 
 .p-top-voice-item {
   cursor: pointer;
-  margin-top: 3.6rem;
-
-  @include sp {
-    margin-top: 3.9rem;
-  }
+  // margin-top: 3.6rem;
+  // @include sp {
+  //   margin-top: 3.9rem;
+  // }
 }
-
-.p-top-voice-item:hover .p-top-voice-item__image {
-  transform: scale(1.1);
-}
-
 
 .p-top-voice-item__image {
   width: 27rem;
@@ -63,6 +64,7 @@
     aspect-ratio: 335 / 200;
   }
 }
+
 .p-top-voice-item__image a {
   display: block;
 }
@@ -72,18 +74,32 @@
   height: 100%;
   display: block;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
-.p-top-voice-item__image a:hover,
-.p-top-voice-item__image a:active,
-.p-top-voice-item__image a:focus {
+
+.p-top-voice-item:hover .p-top-voice-item__image img {
   opacity: 1;
   filter: none;
+  transform: scale(1.1);
 }
+
+/* a 全体にかかっていた暗転は無効化 */
+.p-top-voice-item:hover {
+  opacity: 1 !important;
+}
+
+// .p-top-voice-item__image a:hover,
+// .p-top-voice-item__image a:active,
+// .p-top-voice-item__image a:focus,
+// .p-top-voice-item__image img {
+//   opacity: 1;
+//   filter: none;
+// }
 
 /* テキストは少し透過 */
 .p-top-voice-item:hover .p-top-voice-item__text,
 .p-top-voice-item:hover .p-top-voice-name {
-  opacity: 0.6;
+  opacity: 0.7;
   transition: transform 0.3s ease;
 }
 
@@ -162,12 +178,22 @@
   transform: translateY(-50%);
 
   @include sp {
-    top: 60%;
+    top: 47%;
     transform: translateY(-50%);
 
   }
 }
 
+
+.voice-button-prev,
+.voice-button-next {
+  transition: opacity 0.3s;
+}
+
+.voice-button-prev:hover,
+.voice-button-next:hover {
+  opacity: 0.6;
+}
 
 /* スライダーの外枠だけはみ出し許可 */
 .p-top-voice__slider {
