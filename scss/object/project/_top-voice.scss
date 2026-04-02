@@ -4,7 +4,7 @@
 .p-top-voice {
   background: #CB0000;
   padding-top: 4.4rem;
-  padding-bottom: 8.5rem;
+  padding-bottom: 8rem;
 
   @include sp {
     padding-top: 4.6rem;
@@ -105,7 +105,7 @@
 
 
 .p-top-voice-name {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 2.2rem;
   font-weight: 700;
   line-height: calc(33 / 22);
@@ -174,7 +174,7 @@
 /* 中央配置 */
 .voice-button-prev,
 .voice-button-next {
-  top: 53%;
+  top: 50%;
   transform: translateY(-50%);
 
   @include sp {
