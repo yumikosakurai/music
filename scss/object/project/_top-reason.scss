@@ -29,10 +29,17 @@
 .p-top-reason__items {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 5rem;
+  margin-top: 3rem;
+
+  @include sp {
+    margin-top: 3.6rem;
+    row-gap: 3.9rem;
+  }
 }
 
-.p-top-reason__example {
+
+.p-top-reason__item {
   display: flex;
   column-gap: 5rem;
   position: relative;
@@ -40,9 +47,29 @@
   @include sp {
     display: flex;
     flex-direction: column;
-
+    // row-gap: 3rem;
+    // column-gap: 0;
   }
 }
+
+
+.p-top-reason-item__image {
+  // width: 100%;
+  width: 35rem;
+  aspect-ratio: 350 / 247;
+  overflow: hidden;
+  //   margin-top: 3rem;
+  //   // padding-top: 3rem;
+
+  @include sp {
+    width: 33.5rem;
+    aspect-ratio: 335 / 200;
+
+    //     margin-top: 3.6rem;
+    //     // padding-top: 3.6rem;
+  }
+}
+
 
 img {
   width: 100%;
@@ -50,42 +77,33 @@ img {
   display: block;
 }
 
-.p-top-reason-example-one {
-  width: 100%;
-  max-width: 35rem;
-  margin-top: 3rem;
+.p-top-reason-item__textarea {
+  flex: 1;
+  margin-top: 0.5rem;
 
   @include sp {
-    margin-top: 3.6rem;
-  }
-}
-
-.p-top-reason-example-sec, 
-.p-top-reason-example-thi {
-  margin-top: 4rem;
-    @include sp {
-    margin-top: 2.6rem;
-  }
-}
-
-
-.p-top-reason-lesson {
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: calc(33 / 22);
-  margin-top: 3.5rem;
-
-  @include sp {
-    font-size: 2rem;
-    line-height: calc(30 / 20);
     margin-top: 3rem;
   }
-  
+
+  h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: calc(33 / 22);
+
+    @include sp {
+      font-size: 2rem;
+      line-height: calc(30 / 20);
+      border-bottom: 0.2rem solid #CB0000;
+      padding-bottom: 0.8rem;
+
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 71%;
+    // left: 0;
+    bottom: 79%;
     width: 53.2rem;
     height: 0.2rem;
     background-color: #CB0000;
@@ -94,24 +112,32 @@ img {
 
     @include sp {
       display: none;
-      margin-top: 3rem;
+      // margin-top: 3rem;
     }
   }
 }
 
 
-.p-top-reason-lesson h3 {
+.p-top-reason__com {
+  margin-top: 5rem;
+
   @include sp {
-    border-bottom: 0.2rem solid #CB0000;
-    padding-bottom: 1rem;
+    margin-top: 2.7rem;
   }
 }
 
-.p-top-reason__com {
+// .p-top-reason-lesson h3 {
+//   @include sp {
+//     border-bottom: 0.2rem solid #CB0000;
+//     padding-bottom: 1rem;
+//   }
+// }
+
+ .p-top-reason__com {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: calc(33 / 18);
-  margin-top: 4.9rem;
+//   margin-top: 4.9rem;
 
   @include sp {
     margin-top: 1.7rem;

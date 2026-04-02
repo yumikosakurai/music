@@ -12,14 +12,15 @@
   font-weight: 700;
   line-height: calc(23 / 15);
   color: #FFFFFF;
-  transition: 0.3s;
-
+  transition: background-color 0.4s, color 0.4s;
+  border: 1px solid #CB0000;
 
   &--fixed {
     width: 30rem;
     height: 6rem;
     font-size: 2rem;
     letter-spacing: 0.2em;
+
     @include sp {
       width: 33.5rem;
     }
@@ -28,7 +29,6 @@
   &:hover {
     background-color: #fff;
     color: #CB0000;
-    border: 1px solid #CB0000;
 
   }
 }
@@ -46,10 +46,10 @@
   opacity: 1;
   transition: opacity 0.3s ease;
 
-@include sp {
-  align-self: flex-end;
-  // margin-right: 2rem; // 必要なら余白調整
-}
+  @include sp {
+    align-self: flex-end;
+    // margin-right: 2rem; // 必要なら余白調整
+  }
 
   &__arrow {
     width: 2.4rem;
@@ -68,14 +68,16 @@
   justify-content: center;
   display: flex;
   margin: 0 auto;
+  transition: background-color 0.4s, color 0.4s;
+  border: 1px solid #CB0000;
+
   @include sp {
     width: 33.5rem;
   }
 
-    &:hover {
+  &:hover {
     background-color: #fff;
     color: #CB0000;
-    border: 1px solid #CB0000;
 
   }
 }
@@ -84,25 +86,24 @@
   font-size: 2.5rem;
   font-weight: 700;
   line-height: calc(33 / 25);
-  
+
   @include sp {
     font-size: 2rem;
     line-height: calc(26 / 20);
-  
+
   }
 
 }
+
 .c-send-button {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: calc(33 / 25);
-  
+
   @include sp {
     font-size: 2rem;
     line-height: calc(26 / 20);
-  
+
   }
 
 }
-
-
