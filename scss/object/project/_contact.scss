@@ -20,8 +20,12 @@
 }
 
 .form-checkbox {
-  row-gap: 0.9rem;
+  // row-gap: 0.9rem;
+  @include sp {
+    row-gap: 1.2rem;
+  }
 }
+
 // .form-checkbox span {
 //   vertical-align: middle;
 // }
@@ -64,7 +68,7 @@ input[type="checkbox"]:checked::after {
     padding-top: 4.7rem;
     padding-bottom: 10.8rem;
   }
-    
+
   &__text {
     display: flex;
     flex-direction: column;
@@ -79,7 +83,7 @@ input[type="checkbox"]:checked::after {
       text-align: left;
     }
   }
-    
+
   &__items {
     display: flex;
     flex-direction: column;
@@ -128,11 +132,11 @@ input[type="checkbox"]:checked::after {
     }
   }
 
-  &-content {
-    @include sp {
-      margin-top: 0.4rem;
-    }
-  }
+  // &-content {
+  //   @include sp {
+  //     margin-top: 0.4rem;
+  //   }
+  // }
 }
 
 .form-checkbox {
@@ -151,36 +155,32 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-// .form-detail {
-//   column-gap: 2.9rem;
-// }
 
-.p-contact-form__textarea {
-  font-size: 1.5rem;
-  line-height: calc(33 / 15);
-
-  @include sp {
-    margin-top: 0.4rem;
-    line-height: calc(25 / 15);
-  }
-}
 .p-contact-form__textarea textarea {
   // height: 150px;
   // resize: vertical;
   resize: none;
   height: 30rem;
+  font-size: 1.8rem;
+  line-height: calc(33 / 18);
+
+
 
   @include sp {
     width: 33.5rem;
     height: 19rem;
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+
   }
 }
 
 
+
 .p-contact-form__submit {
-  margin-top: 1.7rem;
+  margin-top: 4.5rem;
   // margin-bottom: 10rem;
-  
+
 
   @include sp {
     margin-top: 5rem;
@@ -188,27 +188,37 @@ input[type="checkbox"]:checked::after {
 }
 
 .p-contact-form__button {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: calc(33 / 25);
-  display: inline-block; /* または block */
-  width: 100%;           /* 横いっぱいにしたい場合 */
-  padding: 1rem 2rem;    /* クリック範囲を広げる */
-  text-align: center;
+  // font-size: 2.5rem;
+  // font-weight: 700;
+  // line-height: calc(33 / 25);
+  // display: inline-block; /* または block */
+  // width: 100%;           /* 横いっぱいにしたい場合 */
+  // padding: 1rem 2rem;    /* クリック範囲を広げる */
+  // text-align: center;
+
 
   @include sp {
     font-size: 2rem;
     line-height: calc(26 / 20);
   }
-  }
-
-
-
-input::placeholder,
-textarea::placeholder {
-  color: #B2B2B2;
-  opacity: 1;
-  font-size: 1.5rem;
-  line-height: calc(33 / 15);
 }
 
+
+
+
+
+
+
+
+// input::placeholder,
+// textarea::placeholder {
+//   color: #B2B2B2;
+//   opacity: 1;
+//   font-size: 1.8rem;
+//   line-height: calc(33 / 15);
+
+//   @include sp {
+//     font-size: 1.6rem;
+//     line-height: calc(25 / 16);
+//   }
+// }

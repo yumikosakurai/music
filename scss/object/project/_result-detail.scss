@@ -198,6 +198,7 @@
 }
 
 .p-result-detail-item {
+  display: flex;
   @include sp {
     display: grid;
     grid-template-columns: 48% 46%;

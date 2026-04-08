@@ -19,7 +19,7 @@
 
   @include sp {
     padding-top: 5.5rem;
-    padding-bottom: 20.5rem;
+    padding-bottom: 20rem;
 
   }
 
@@ -48,7 +48,6 @@
   &__image {
     // flex: 0 0 29.5%;
     width: 26rem;
-    aspect-ratio: 260 / 184;
     overflow: hidden;
 
     @include sp {
@@ -62,6 +61,11 @@
       height: 100%;
       display: block;
       object-fit: cover;
+      aspect-ratio: 260 / 184;
+
+      @include sp {
+        aspect-ratio: 335 / 200;
+      }
 
       picture {
         display: block;
@@ -92,10 +96,10 @@
       margin-left: 0;
       display: block;
       text-align: right;
-      margin-top: 0.6rem;
+      // margin-top: 0.6rem;
     }
   }
-
+  
   &__text {
     margin-top: 1.1rem;
     font-size: 1.8rem;
@@ -162,7 +166,7 @@
 
   // margin-bottom: 21rem;
   @include sp {
-    margin-top: 5.9rem;
+    margin-top: 5.5rem;
     // margin-bottom: 14.3rem;
   }
 }
