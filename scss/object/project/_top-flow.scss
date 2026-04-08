@@ -93,13 +93,12 @@
   z-index: 2;
   margin: 0 auto;
   // margin-bottom: 1.7rem;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 
 .p-top-flow-block__circle {
   @include sp {
     margin: 0;
-    margin-top: 1rem;
     position: absolute;
   }
 }

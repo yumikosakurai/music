@@ -15,7 +15,7 @@
 
   @include sp {
     display: flex;
-    height: 50px;
+    height: 5rem;
 
   }
 
@@ -149,6 +149,8 @@
 .l-header-nav {
   display: none;
   column-gap: 3.3rem;
+  align-items: center;
+  height: 8rem;
 
   @include sp {
     position: fixed;
@@ -157,7 +159,7 @@
     width: 30rem;
     background: #CB0000;
     flex-direction: column;
-    transform: translateX(100%); 
+    transform: translateX(100%);
     transition: transform 0.6s ease;
     z-index: 9998;
     display: block; // ← SPでは常に block にしておく
@@ -174,19 +176,28 @@
 }
 
 
+
 .l-header__right {
   align-items: center;
   column-gap: 3.3rem;
   display: flex;
 }
 
-
 .l-header-nav li {
-  // padding: 1.65rem;
-  // padding: 2.55rem 2rem 2rem;
+  @include sp {
+    height: 5.8rem;
+    display: flex;
+    align-items: center;
+
+  }
 }
 
+
 .l-header-nav li a {
+  display: flex; // block でも OK
+  align-items: center;
+  width: 100%;
+  height: 100%;
   font-weight: 700;
   font-size: 1.7rem;
   line-height: calc(33 / 17);
@@ -194,6 +205,7 @@
   @include sp {
     font-size: 1.8rem;
     line-height: calc(33 / 18);
+    padding-left: 2rem;
 
   }
 }
