@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	window.addEventListener("scroll", () => {
 		const footerTop = footer.getBoundingClientRect().top;
-		console.log(footerTop)
+		// console.log(footerTop)
 		const windowHeight = window.innerHeight;
 		const scrollY = window.scrollY || window.pageYOffset;
 		if (footerTop <= windowHeight) {
