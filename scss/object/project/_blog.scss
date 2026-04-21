@@ -99,7 +99,7 @@
       // margin-top: 0.6rem;
     }
   }
-  
+
   &__text {
     margin-top: 1.1rem;
     font-size: 1.8rem;
@@ -131,35 +131,58 @@
   @include sp {
     gap: 0.5rem;
   }
-
-  a,
-  span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-    border: 1px solid #000;
-    text-decoration: none;
-    // color: #000;
-
-    @include sp {
-      width: 4.4rem;
-      height: 4.4rem;
-    }
-
-    a {
-      color: #000;
-    }
-
-
-    &:hover {
-      background: #000;
-      color: #fff;
-    }
-
-  }
 }
+
+// a,
+// span {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 5rem;
+//   height: 5rem;
+//   border: 1px solid #000;
+//   text-decoration: none;
+//   // color: #000;
+
+//   @include sp {
+//     width: 4.4rem;
+//     height: 4.4rem;
+//   }
+
+.p-pagination__list li {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-pagination__list a,
+.p-pagination__list span {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-pagination__dots {
+  border: none;
+}
+
+.p-pagination__list a {
+  color: #000;
+
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+
+}
+
+
+
 
 .p-pagination {
   margin-top: 7.5rem;
@@ -189,7 +212,8 @@
   }
 }
 
-.p-pagination__list a {
+.p-pagination__list a,
+.p-pagination__list span {
   transition: background-color 0.4s, color 0.4s;
   opacity: 1;
 }

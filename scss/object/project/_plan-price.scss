@@ -15,7 +15,7 @@
     z-index: 1;
     mix-blend-mode: multiply;
   }
-
+  
 
   &-catch {
     position: absolute;
@@ -23,7 +23,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    z-index: 2;
+    z-index: 5;
     color: #fff;
     text-align: center;
 
@@ -33,6 +33,7 @@
     line-height: calc(60 / 25);
   }
 }
+
 
 
 .p-plan {
