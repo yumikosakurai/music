@@ -11,21 +11,22 @@
   }
 }
 
-
 .c-breadcrumbs__inner {
   height: 100%;
   display: flex;
   align-items: center;
+
 }
+
 
 .c-blog-detail__inner {
   height: 100%;
   display: flex;
   align-items: center;
 
-  @include sp {
-    padding-bottom: 1rem;
-  }
+  // @include sp {
+  //   padding-bottom: 1rem;
+  // }
 }
 
 
@@ -52,16 +53,33 @@
   // }
 }
 
-.c-blog-detail-list {
-  @include sp {
-    margin-top: 0.8rem;
-  }
-}
+
+// .c-blog-detail-list {
+//   @include sp {
+//     margin-top: 0.8rem;
+//   }
+// }
 
 
 .c-breadcrumbs__list li {
   flex: 0 0 auto; // ← ★これが重要（縮まない）
+
+  position: relative;
+  padding-right: 3.2rem; //>の余白//
 }
+
+.c-breadcrumbs__list li a {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+  @include sp {
+    height: 3.6rem;
+  }
+}
+
+
+
 
 
 .c-breadcrumbs__list span {
@@ -70,13 +88,25 @@
   line-height: calc(33 / 16);
 }
 
-.c-breadcrumbs__list li+li::before {
+// .c-breadcrumbs__list li+li::before {
+//   content: ">";
+//   margin: 0 8px;
+//   color: rgba(0, 0, 0, 1);
+// }
+.c-breadcrumbs__list li::after {
+
   content: ">";
-  margin: 0 8px;
-  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
 }
 
-
+/* 最後は消す */
+.c-breadcrumbs__list li:last-child::after {
+  content: none;
+}
 
 
 // .c-breadcrumbs__list {
